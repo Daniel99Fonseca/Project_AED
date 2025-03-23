@@ -9,6 +9,8 @@ install.packages("flextable")
 library(flextable)
 install.packages("moments")
 library(moments)
+install.packages("DescTools")
+library(DescTools)
 
 # Leitura do Excel
 df <- read.xlsx("AED_CP23_Saúde_Copia.xlsx")
@@ -87,7 +89,7 @@ outro_p <- as.numeric(percen[3])
 nao_resp_p <- as.numeric(percen[4])
 
 # Criação dos headers
-Genero <- c("Masculino", "Feminino", "Outro", "Não respondeu")s
+Genero <- c("Masculino", "Feminino", "Outro", "Não respondeu")
 Percentagem <- c(masc_p, fem_p, outro_p, nao_resp_p)
 n <- c(masc_n,fem_n,outro_n,nao_resp_n)
 
@@ -98,7 +100,6 @@ ftable_gen
 # Customização da flextable
 ftable_gen <- bg(ftable_gen, bg = "#3895D3", part = "header")
 ftable_gen
-
 
 ftable_gen <- color(ftable_gen, color = "white", part = "header")
 ftable_gen <- autofit(ftable_gen) 
