@@ -119,44 +119,29 @@ ftable_gen
 # A FAZER - VER SCRIPT TABELAS2_TP7+TP8
 summary(df$Horas.de.Sono)
 
-# Gráfico com um fundo menos marcante e barras azuis
+# Questão 1
+# Histograma das Horas de Sono
 Histogram_H_Sono <- ggplot(data=df, aes(Horas.de.Sono))+geom_bar()
 Histogram_H_Sono
-
-# FAZER BARRAS 4,5 E 6 NUMA SÓ
-# FAZER BARRAS 4,5 E 6 NUMA SÓ
-# FAZER BARRAS 4,5 E 6 NUMA SÓ
-# FAZER BARRAS 4,5 E 6 NUMA SÓ
-# FAZER BARRAS 4,5 E 6 NUMA SÓ
-# FAZER BARRAS 4,5 E 6 NUMA SÓ
 Histogram_H_Sono+geom_bar(fill='skyblue')+ theme_minimal()+xlab("Horas de Sono") + ylab("Frequência")
+# FAZER BARRAS 4,5 E 6 NUMA SÓ
+# FAZER BARRAS 4,5 E 6 NUMA SÓ
+# FAZER BARRAS 4,5 E 6 NUMA SÓ
+# FAZER BARRAS 4,5 E 6 NUMA SÓ
+# FAZER BARRAS 4,5 E 6 NUMA SÓ
+# FAZER BARRAS 4,5 E 6 NUMA SÓ
 
-
-<<<<<<< HEAD
-=======
-#4.4.2.histograma com título,identificação dos eixos e cor
-hist(bd$Valor.compra, main="Distribuição do valor da última compra (Euros)", xlab = "Euros", ylab = "n",col="lightgreen")
-
-#4.4.3.com 4 classes de valores
-hist(bd$Valor.compra,breaks = 4, col="Light Blue")
-
-#4.4.3.com 4 classes de valores e intensidade de cor (só para exemplo)
-hist(bd$Valor.compra,breaks = 4, col=c("Light blue","skyblue","blue","navy"))
-
-#4.4.4.com um vector com os valores dos limites das classes
-hist(bd$Valor.compra,breaks=c(0,100,250,350,550,700), col ="Light Blue")
-
-#Tabela de dispersão (Scatterplot) - Género vs Depressão
+# Questão 2
+# Gráfico de Barras - Género vs Depressão
+# Criação da coluna Média de respostas de depressão
 df$Mediadp <- (df$v39 + df$v41 + df$v46 + df$v49 + df$v52 + df$v53 + df$v57)/7
 
-
+# Aplicação de filtro para obter apenas Genero Masculino e Feminino
 df_q2 <- df %>% filter(Genero %in% c("Masculino", "Feminino"))
 
+# Criação do gráfico de barras
 ggplot(df_q2, aes(x=Genero,y=Mediadp, fill=Genero)) + 
   stat_summary(fun = mean, geom = "bar") +
   labs(title="Relação entre Género e Depressão",x="Género",y="Média de Níveis de Depressão") +
   scale_fill_manual(values = c("blue","pink","purple","gray")) +
   theme_minimal()
-
-summary(df$Mediadp)
->>>>>>> 157d2efc8c164296dd942d47f92768e9d83600ef
