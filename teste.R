@@ -28,11 +28,11 @@ colnames(df)
 # Mudança de nome de várias colunas para ser mais acessível
 # Não foram usados carateres especiais para facilitar a parte do código do
 # projeto
-colnames(df)[2] <- "Zona geografica"
+colnames(df)[2] <- "Zona.geografica"
 colnames(df)[3] <- "Genero"
 colnames(df)[4] <- "Idades"
-colnames(df)[15] <- "Horas de Sono"
-colnames(df)[5] <- "Ciclo de Escolaridade"
+colnames(df)[15] <- "Horas.de.Sono"
+colnames(df)[5] <- "Ciclo.de.Escolaridade"
 
 # Remoção de ' depressão' dos nomes das colunas
 colnames(df)[6:13] <- gsub("_depressao","",colnames(df)[6:13])
@@ -107,22 +107,28 @@ ftable_gen <- autofit(ftable_gen)
 ftable_gen
 
 # Medidas descritivas de uma variável quantitativa: Horas de sono
-summary(df$`Horas de Sono`)
+# A FAZER - VER SCRIPT TABELAS2_TP7+TP8
+# A FAZER - VER SCRIPT TABELAS2_TP7+TP8
+# A FAZER - VER SCRIPT TABELAS2_TP7+TP8
+# A FAZER - VER SCRIPT TABELAS2_TP7+TP8
+# A FAZER - VER SCRIPT TABELAS2_TP7+TP8
+# A FAZER - VER SCRIPT TABELAS2_TP7+TP8
+# A FAZER - VER SCRIPT TABELAS2_TP7+TP8
+# A FAZER - VER SCRIPT TABELAS2_TP7+TP8
+# A FAZER - VER SCRIPT TABELAS2_TP7+TP8
+# A FAZER - VER SCRIPT TABELAS2_TP7+TP8
+summary(df$Horas.de.Sono)
 
-#4.4.Histograma
+# Gráfico com um fundo menos marcante e barras azuis
+Histogram_H_Sono <- ggplot(data=df, aes(Horas.de.Sono))+geom_bar()
+Histogram_H_Sono
 
-#4.4.1 Histograma sobre o valor de compra - função hist
+# FAZER BARRAS 4,5 E 6 NUMA SÓ
+# FAZER BARRAS 4,5 E 6 NUMA SÓ
+# FAZER BARRAS 4,5 E 6 NUMA SÓ
+# FAZER BARRAS 4,5 E 6 NUMA SÓ
+# FAZER BARRAS 4,5 E 6 NUMA SÓ
+# FAZER BARRAS 4,5 E 6 NUMA SÓ
+Histogram_H_Sono+geom_bar(fill='skyblue')+ theme_minimal()+xlab("Horas de Sono") + ylab("Frequência")
 
-hist(bd$Valor.compra)
 
-#4.4.2.histograma com título,identificação dos eixos e cor
-hist(bd$Valor.compra, main="Distribuição do valor da última compra (Euros)", xlab = "Euros", ylab = "n",col="lightgreen")
-
-#4.4.3.com 4 classes de valores
-hist(bd$Valor.compra,breaks = 4, col="Light Blue")
-
-#4.4.3.com 4 classes de valores e intensidade de cor (só para exemplo)
-hist(bd$Valor.compra,breaks = 4, col=c("Light blue","skyblue","blue","navy"))
-
-#4.4.4.com um vector com os valores dos limites das classes
-hist(bd$Valor.compra,breaks=c(0,100,250,350,550,700), col ="Light Blue")
