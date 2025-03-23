@@ -54,22 +54,55 @@ df$v57[is.na(df$v57)] <- median(df$v57, na.rm = TRUE)
 df$v76[is.na(df$v76)] <- median(df$v76, na.rm = TRUE)
 
 # Tabela com valores absolutos e percentuais sobre género (uni variada)
-n <- table(df$Genero)
-n
+gen_n <- table(df$Genero)
+gen_n
 
 # Observou-se que os géneros não tem o seu código atribuído
 # Atribuição do código ao respetivo número
 df$Genero <- factor(df$Genero, levels=c(1:4), labels=c("Masculino","Feminino","Outro","Prefiro não responder"))
 
 # Tabela com códigos atualizados
-n <- table(df$Genero)
-n
+gen_n <- table(df$Genero)
+gen_n
 
 # Criação da tabela com Frequências relativas
-Percen <- round((prop.table(n)*100),1)
-Percen
+percen <- round((prop.table(gen_n)*100),1)
+percen
 
 # Tabela Final 
-tab_generos <- rbind(n,Percen)
-tab_generos <- data.frame(n, Percen)
-ftable_gen <- flextable(tab_generos)
+tab_generos <- rbind(gen_n,percen)
+tab_generos
+
+# Criação de FlexTable. Univariada com o objetivo de entender a % de género da amostra.
+# Definição de numeric as frequencias absolutas
+masc_n <- as.numeric(gen_n[1])
+fem_n <- as.numeric(gen_n[2])
+outro_n <- as.numeric(gen_n[3])
+nao_resp_n <- as.numeric(gen_n[4])
+
+# Definição de numeric as frequencias relativas
+masc_p <- as.numeric(percen[1])
+fem_p<- as.numeric(percen[2])
+outro_p <- as.numeric(percen[3])
+nao_resp_p <- as.numeric(percen[4])
+
+# Criação dos headers
+Genero <- c("Masculino", "Feminino", "Outro", "Não respondeu")s
+Percentagem <- c(masc_p, fem_p, outro_p, nao_resp_p)
+n <- c(masc_n,fem_n,outro_n,nao_resp_n)
+
+table_gen <- data.frame(Genero,n, Percentagem)
+ftable_gen <- flextable(table_gen)
+ftable_gen
+
+# Customização da flextable
+ftable_gen <- bg(ftable_gen, bg = "#3895D3", part = "header")
+ftable_gen
+
+
+ftable_gen <- color(ftable_gen, color = "white", part = "header")
+ftable_gen <- autofit(ftable_gen) 
+ftable_gen
+
+# Medidas descritivas de uma variável quantitativa: Horas de sono
+summary(df$`Horas de Sono`)
