@@ -126,3 +126,17 @@ hist(bd$Valor.compra,breaks = 4, col=c("Light blue","skyblue","blue","navy"))
 
 #4.4.4.com um vector com os valores dos limites das classes
 hist(bd$Valor.compra,breaks=c(0,100,250,350,550,700), col ="Light Blue")
+
+#Tabela de dispersão (Scatterplot) - Género vs Depressão
+df$Mediadp <- (df$v39 + df$v41 + df$v46 + df$v49 + df$v52 + df$v53 + df$v57)/7
+
+
+df_q2 <- df %>% filter(Genero %in% c("Masculino", "Feminino"))
+
+ggplot(df_q2, aes(x=Genero,y=Mediadp, fill=Genero)) + 
+  stat_summary(fun = mean, geom = "bar") +
+  labs(title="Relação entre Género e Depressão",x="Género",y="Média de Níveis de Depressão") +
+  scale_fill_manual(values = c("blue","pink","purple","gray")) +
+  theme_minimal()
+
+summary(df$Mediadp)
