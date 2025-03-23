@@ -1,15 +1,16 @@
 # Bibliotecas
 install.packages("openxlsx")
-library(openxlsx)
 install.packages("tidyverse")
-library(tidyverse)
 install.packages("descr")
-library(descr)
 install.packages("flextable")
-library(flextable)
 install.packages("moments")
-library(moments)
 install.packages("DescTools")
+
+library(openxlsx)
+library(tidyverse)
+library(descr)
+library(flextable)
+library(moments)
 library(DescTools)
 
 # Leitura do Excel
@@ -107,3 +108,21 @@ ftable_gen
 
 # Medidas descritivas de uma variável quantitativa: Horas de sono
 summary(df$`Horas de Sono`)
+
+#4.4.Histograma
+
+#4.4.1 Histograma sobre o valor de compra - função hist
+
+hist(bd$Valor.compra)
+
+#4.4.2.histograma com título,identificação dos eixos e cor
+hist(bd$Valor.compra, main="Distribuição do valor da última compra (Euros)", xlab = "Euros", ylab = "n",col="lightgreen")
+
+#4.4.3.com 4 classes de valores
+hist(bd$Valor.compra,breaks = 4, col="Light Blue")
+
+#4.4.3.com 4 classes de valores e intensidade de cor (só para exemplo)
+hist(bd$Valor.compra,breaks = 4, col=c("Light blue","skyblue","blue","navy"))
+
+#4.4.4.com um vector com os valores dos limites das classes
+hist(bd$Valor.compra,breaks=c(0,100,250,350,550,700), col ="Light Blue")
