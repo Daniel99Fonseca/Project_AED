@@ -17,10 +17,12 @@ View(df)
 colnames(df)
 
 # Mudança de nome de várias colunas para ser mais acessível
-colnames(df)[2] <- "Zona Geográfica"
-colnames(df)[3] <- "Género"
+# Não foram usados carateres especiais para facilitar a parte do código do
+# projeto
+colnames(df)[2] <- "Zona geografica"
+colnames(df)[3] <- "Genero"
 colnames(df)[4] <- "Idades"
-colnames(df)[15] <- "Horas_de_Sono"
+colnames(df)[15] <- "Horas de Sono"
 colnames(df)[5] <- "Ciclo de Escolaridade"
 
 # Remoção de ' depressão' dos nomes das colunas
@@ -45,4 +47,13 @@ df$v53[is.na(df$v53)] <- median(df$v53, na.rm = TRUE)
 df$v57[is.na(df$v57)] <- median(df$v57, na.rm = TRUE)
 df$v76[is.na(df$v76)] <- median(df$v76, na.rm = TRUE)
 
+# Tabela com valores absolutos e percentuais sobre género
+tab_generos<-table(df$Genero)
+tab_generos
 
+# Observou-se que os géneros não tem o seu código atribuído
+# Atribuição do código ao respetivo número
+df$Genero <- factor(df$Genero, levels=c(1:4), labels=c("Masculino","Feminino","Outro","Prefiro não responder"))
+
+tab_generos <-table(df$Genero)
+tab_generos
