@@ -47,13 +47,22 @@ df$v53[is.na(df$v53)] <- median(df$v53, na.rm = TRUE)
 df$v57[is.na(df$v57)] <- median(df$v57, na.rm = TRUE)
 df$v76[is.na(df$v76)] <- median(df$v76, na.rm = TRUE)
 
-# Tabela com valores absolutos e percentuais sobre género
-tab_generos<-table(df$Genero)
-tab_generos
+# Tabela com valores absolutos e percentuais sobre género (uni variada)
+n <- table(df$Genero)
+n
 
 # Observou-se que os géneros não tem o seu código atribuído
 # Atribuição do código ao respetivo número
 df$Genero <- factor(df$Genero, levels=c(1:4), labels=c("Masculino","Feminino","Outro","Prefiro não responder"))
 
-tab_generos <-table(df$Genero)
+# Tabela com códigos atualizados
+n <- table(df$Genero)
+n
+
+# Criação da tabela com Frequências relativas
+Percen <- round((prop.table(n)*100),1)
+Percen
+
+# Tabela Final 
+tab_generos <- rbind(n,Percen)
 tab_generos
