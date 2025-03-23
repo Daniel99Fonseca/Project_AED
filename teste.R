@@ -143,5 +143,5 @@ df_q2 <- df %>% filter(Genero %in% c("Masculino", "Feminino"))
 ggplot(df_q2, aes(x=Genero,y=Mediadp, fill=Genero)) + 
   stat_summary(fun = mean, geom = "bar") +
   labs(title="Relação entre Género e Depressão",x="Género",y="Média de Níveis de Depressão") +
-  scale_fill_manual(values = c("blue","pink","purple","gray")) +
+  scale_fill_manual(values = c("blue","pink")) +
   theme_minimal()
