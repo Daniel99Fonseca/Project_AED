@@ -1,5 +1,7 @@
 install.packages("openxlsx")
 library(openxlsx)
+install.packages("tidyverse")
+library(tidyverse)
 
 df <- read.xlsx("AED_CP23_Saúde_Copia.xlsx")
 View(df)
@@ -14,11 +16,13 @@ colnames(df)
 summary(df)
 
 df[df == 99] <- NA
-df$v39[is.na(df$v39)] <- mean(df$v39, na.rm = TRUE)
-df$v41[is.na(df$v41)] <- mean(df$v41, na.rm = TRUE)
-df$v46[is.na(df$v46)] <- mean(df$v46, na.rm = TRUE)
-df$v49[is.na(df$v49)] <- mean(df$v49, na.rm = TRUE)
-df$v52[is.na(df$v52)] <- mean(df$v52, na.rm = TRUE)
-df$v53[is.na(df$v53)] <- mean(df$v53, na.rm = TRUE)
-df$v57[is.na(df$v57)] <- mean(df$v57, na.rm = TRUE)
-df$v76[is.na(df$v76)] <- mean(df$v76, na.rm = TRUE)
+df$v39[is.na(df$v39)] <- median(df$v39, na.rm = TRUE)
+df$v41[is.na(df$v41)] <- median(df$v41, na.rm = TRUE)
+df$v46[is.na(df$v46)] <- median(df$v46, na.rm = TRUE)
+df$v49[is.na(df$v49)] <- median(df$v49, na.rm = TRUE)
+df$v52[is.na(df$v52)] <- median(df$v52, na.rm = TRUE)
+df$v53[is.na(df$v53)] <- median(df$v53, na.rm = TRUE)
+df$v57[is.na(df$v57)] <- median(df$v57, na.rm = TRUE)
+df$v76[is.na(df$v76)] <- median(df$v76, na.rm = TRUE)
+
+
