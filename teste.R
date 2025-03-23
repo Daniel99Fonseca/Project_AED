@@ -1,21 +1,41 @@
+# Bibliotecas
 install.packages("openxlsx")
 library(openxlsx)
 install.packages("tidyverse")
 library(tidyverse)
 
+# Leitura do Excel
 df <- read.xlsx("AED_CP23_Saúde_Copia.xlsx")
+
+# Qual o tipo de classe: data.frame
+class(df)
+
+# Ver o DataFrame dentro do R numa nova janela
 View(df)
+
+# Averiguar o nome das colunas do DataFrame
+colnames(df)
+
+# Mudança de nome de várias colunas para ser mais acessível
 colnames(df)[2] <- "Zona Geográfica"
 colnames(df)[3] <- "Género"
 colnames(df)[4] <- "Idades"
 colnames(df)[15] <- "Horas_de_Sono"
 colnames(df)[5] <- "Ciclo de Escolaridade"
+
+# Remoção de ' depressão' dos nomes das colunas
 colnames(df)[6:13] <- gsub("_depressao","",colnames(df)[6:13])
 colnames(df)
 
+# Verificação de summary do dataframe, podemos ver que há bastantes '99'
 summary(df)
 
+# Atribuição do código 99 ('não-resposta') ao valor missing
 df[df == 99] <- NA
+
+#Substituição dos valores missing pela mediana da respetiva coluna.
+# Dizer que podíamos usar a função lapply, mas foi sem sucesso. Seria uma forma
+# mais eficiente de fazer este passo.
 df$v39[is.na(df$v39)] <- median(df$v39, na.rm = TRUE)
 df$v41[is.na(df$v41)] <- median(df$v41, na.rm = TRUE)
 df$v46[is.na(df$v46)] <- median(df$v46, na.rm = TRUE)
