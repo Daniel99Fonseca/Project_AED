@@ -3,6 +3,12 @@ install.packages("openxlsx")
 library(openxlsx)
 install.packages("tidyverse")
 library(tidyverse)
+install.packages("descr")
+library(descr)
+install.packages("flextable")
+library(flextable)
+install.packages("moments")
+library(moments)
 
 # Leitura do Excel
 df <- read.xlsx("AED_CP23_Saúde_Copia.xlsx")
@@ -65,4 +71,5 @@ Percen
 
 # Tabela Final 
 tab_generos <- rbind(n,Percen)
-tab_generos
+tab_generos <- data.frame(n, Percen)
+ftable_gen <- flextable(tab_generos)
