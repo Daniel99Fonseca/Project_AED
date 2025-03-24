@@ -124,10 +124,7 @@ summary(df$Horas.de.Sono)
 Histogram_H_Sono <- ggplot(data=df, aes(Horas.de.Sono))+geom_bar()
 Histogram_H_Sono
 Histogram_H_Sono+geom_bar(fill='skyblue')+ theme_minimal()+xlab("Horas de Sono") + ylab("Frequência")
-# FAZER BARRAS 4,5 E 6 NUMA SÓ
-# FAZER BARRAS 4,5 E 6 NUMA SÓ
-# FAZER BARRAS 4,5 E 6 NUMA SÓ
-# FAZER BARRAS 4,5 E 6 NUMA SÓ
+
 # FAZER BARRAS 4,5 E 6 NUMA SÓ
 # FAZER BARRAS 4,5 E 6 NUMA SÓ
 
@@ -143,5 +140,16 @@ df_q2 <- df %>% filter(Genero %in% c("Masculino", "Feminino"))
 ggplot(df_q2, aes(x=Genero,y=Mediadp, fill=Genero)) + 
   stat_summary(fun = mean, geom = "bar") +
   labs(title="Relação entre Género e Depressão",x="Género",y="Média de Níveis de Depressão") +
-  scale_fill_manual(values = c("blue","pink")) +
+  scale_fill_manual(values = c("white","black")) +
+  theme_minimal()
+
+#Homens de branco porque são felizes até casarem-se (As Mulheres fazem-lhes a vida negra)
+
+df_q3 <- df
+df_q3 <- df%>% filter(!(Idades %in% c(19,20)))
+
+#Gráfico de barras para analise das médias de depressão por idade
+ggplot(df_q3, aes(x=as.factor(Idades),y=Mediadp, fill=Idades)) +
+  stat_summary(fun = mean, geom = "bar") +
+  labs(title="Relação entre Idade e Depressão",x="Idade",y="Média de Níveis de Depressão") +
   theme_minimal()
