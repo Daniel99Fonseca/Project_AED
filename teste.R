@@ -107,13 +107,9 @@ ftable_gen
 
 # Medidas descritivas de uma variável quantitativa: Horas de sono
 class(df$Horas.de.Sono)
-
 mean(df$Horas.de.Sono)
-
 mean(df$Horas.de.Sono,na.rm=TRUE)
-
 round(mean(df$Horas.de.Sono, na.rm = TRUE),1)
-
 
 n <- length(df$Horas.de.Sono)
 media <- round(mean(df$Horas.de.Sono,na.rm=TRUE),1)
@@ -127,8 +123,7 @@ thirdqt <- round(quantile(df$Horas.de.Sono, 0.75, na.rm=TRUE), 1)
 assimetria <- round(skewness(df$Horas.de.Sono, na.rm=TRUE),1)
 curtose <- round(kurtosis(df$Horas.de.Sono, na.rm=TRUE),1)
 
-# construção da tabela
-#########################
+# construção da tabela de medidas descritivas
 table_agreg <- data.frame(
   Estatística = c("Média",
                   "Mediana",
@@ -176,9 +171,7 @@ Histogram_H_Sono+geom_bar(fill='skyblue')+ theme_minimal()+xlab("Horas de Sono")
 # FAZER BARRAS 4,5 E 6 NUMA SÓ
 
 # Histograma das idades
-Histogram_idades <- ggplot(data=df, aes(Idades))+geom_bar()
-Histogram_idades
-Histogram_idades+geom_bar(fill='skyblue')+ theme_minimal()+xlab("Idades") + ylab("Frequência")
+hist(df$Idades,breaks = c(10,12,14,16,18,20), col=c("Light blue"))
 
 # Questão 2
 # Gráfico de Barras - Género vs Depressão
@@ -188,7 +181,7 @@ df$Mediadp <- (df$v39 + df$v41 + df$v46 + df$v49 + df$v52 + df$v53 + df$v57)/7
 # Aplicação de filtro para obter apenas Genero Masculino e Feminino
 df_q2 <- df %>% filter(Genero %in% c("Masculino", "Feminino"))
 
-# Criação do gráfico de barras
+# Criação do gráfico de barras de Género e Depressão
 ggplot(df_q2, aes(x=Genero,y=Mediadp, fill=Genero)) +
   stat_summary(fun = mean, geom = "bar") +
   labs(title="Relação entre Género e Depressão",x="Género",y="Média de Níveis de Depressão") +
@@ -206,4 +199,3 @@ ggplot(df_q3, aes(x=as.factor(Idades),y=Mediadp, fill=Idades)) +
   scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1), # remove a escala numérica da média
                      labels = c("Menos sintomas\nde depressão", "", "", "", "Mais sintomas\nde depressão")) + #adiciona nova legenda ao y
   theme(legend.position = 'none') # remove legenda à direita
-
