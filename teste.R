@@ -142,7 +142,6 @@ ggplot(df_q2, aes(x=Genero,y=Mediadp, fill=Genero)) +
   labs(title="Relação entre Género e Depressão",x="Género",y="Média de Níveis de Depressão") +
   scale_fill_manual(values = c("white","black")) +
   theme_minimal()
-#Homens de branco porque são felizes até casarem-se (As Mulheres fazem-lhes a vida negra)
 
 #Remover Idades 19 e 20 por haver apenas 1 de cada, resultando numa média "biased" em relação a estas idades
 df_q3 <- df
@@ -152,4 +151,6 @@ df_q3 <- df%>% filter(!(Idades %in% c(19,20)))
 ggplot(df_q3, aes(x=as.factor(Idades),y=Mediadp, fill=Idades)) +
   stat_summary(fun = mean, geom = "bar") +
   labs(title="Relação entre Idade e Depressão",x="Idade",y="Média de Níveis de Depressão") +
+  scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1),
+                     labels = c("Menos sintomas", "", "", "", "Mais sintomas")) +
   theme_minimal()
