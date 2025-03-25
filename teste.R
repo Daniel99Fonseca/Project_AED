@@ -107,13 +107,9 @@ ftable_gen
 
 # Medidas descritivas de uma variável quantitativa: Horas de sono
 class(df$Horas.de.Sono)
-
 mean(df$Horas.de.Sono)
-
 mean(df$Horas.de.Sono,na.rm=TRUE)
-
 round(mean(df$Horas.de.Sono, na.rm = TRUE),1)
-
 
 n <- length(df$Horas.de.Sono)
 media <- round(mean(df$Horas.de.Sono,na.rm=TRUE),1)
@@ -127,8 +123,7 @@ thirdqt <- round(quantile(df$Horas.de.Sono, 0.75, na.rm=TRUE), 1)
 assimetria <- round(skewness(df$Horas.de.Sono, na.rm=TRUE),1)
 curtose <- round(kurtosis(df$Horas.de.Sono, na.rm=TRUE),1)
 
-# construção da tabela
-#########################
+# construção da tabela de medidas descritivas
 table_agreg <- data.frame(
   Estatística = c("Média",
                   "Mediana",
