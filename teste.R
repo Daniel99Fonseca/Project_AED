@@ -169,7 +169,11 @@ Histogram_H_Sono
 Histogram_H_Sono+geom_bar(fill='skyblue')+ theme_minimal()+xlab("Horas de Sono") + ylab("Frequência")
 
 # Histograma das idades
+<<<<<<< HEAD
 h_idades <- hist(df$Idades,breaks = c(10,12,14,16,18,20), col=c("Light blue", "darkblue","blue","navy"))
+=======
+hist(df$Idades,breaks = c(10,12,14,16,20), col=c("Light blue", "darkblue","blue","navy"))
+>>>>>>> 64cfd4d6b73657827741207f4ee80cb3dec10aa2
 
 # Questão 2
 # Gráfico de Barras - Género vs Depressão
