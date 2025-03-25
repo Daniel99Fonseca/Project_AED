@@ -167,11 +167,9 @@ summary(df$Horas.de.Sono)
 Histogram_H_Sono <- ggplot(data=df, aes(Horas.de.Sono))+geom_bar()
 Histogram_H_Sono
 Histogram_H_Sono+geom_bar(fill='skyblue')+ theme_minimal()+xlab("Horas de Sono") + ylab("Frequência")
-# FAZER BARRAS 4,5 E 6 NUMA SÓ
-# FAZER BARRAS 4,5 E 6 NUMA SÓ
 
 # Histograma das idades
-hist(df$Idades,breaks = c(10,12,14,16,18,20), col=c("Light blue"))
+hist(df$Idades,breaks = c(10,12,14,16,20), col=c("Light blue", "darkblue","blue","navy"))
 
 # Questão 2
 # Gráfico de Barras - Género vs Depressão
@@ -192,6 +190,7 @@ ggplot(df_q2, aes(x=Genero,y=Mediadp, fill=Genero)) +
 df_q3 <- df
 df_q3 <- df%>% filter(!(Idades %in% c(19,20)))
 
+# Questão 4
 # Gráfico de barras para analise das médias de depressão por idade
 ggplot(df_q3, aes(x=as.factor(Idades),y=Mediadp, fill=Idades)) +
   stat_summary(fun = mean, geom = "bar") +
