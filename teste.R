@@ -152,5 +152,5 @@ ggplot(df_q3, aes(x=as.factor(Idades),y=Mediadp, fill=Idades)) +
   stat_summary(fun = mean, geom = "bar") +
   labs(title="Relação entre Idade e Depressão",x="Idade",y="Média de Níveis de Depressão") +
   scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1),
-                     labels = c("Menos sintomas", "", "", "", "Mais sintomas")) +
+                     labels = c("Menos sintomas\nde depressão", "", "", "", "Mais sintomas\nde depressão")) +
   theme_minimal()
