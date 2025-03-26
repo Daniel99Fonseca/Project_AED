@@ -5,6 +5,7 @@ install.packages("descr")
 install.packages("flextable")
 install.packages("moments")
 install.packages("DescTools")
+install.packages("ggplot2")
 
 library(openxlsx)
 library(tidyverse)
@@ -12,6 +13,7 @@ library(descr)
 library(flextable)
 library(moments)
 library(DescTools)
+library(ggplot2)
 
 # Leitura do Excel
 df <- read.xlsx("AED_CP23_Saúde_Copia.xlsx")
@@ -222,6 +224,20 @@ ftab_desc_sono <- color(ftab_desc_sono, color = "white", part = "header")
 ftab_desc_sono <- autofit(ftab_desc_sono)
 ftab_desc_sono
 summary(df$Horas.de.Sono)
+############################################
+
+#boxplot med idade
+#calculo da medida da tabela Idades
+media_idade <- mean(df$Idades, na.rm = TRUE)
+
+#criar o data frame para a med idade 
+df_media <- data.frame(Grupo = "Média das Idades", Idades = media_idade)
+
+#criar o boxplot 
+ggplot(df, aes(y = Idades)) + geom_boxplot() + 
+  labs(title = "Boxplot das Idades", y = "Idades") +
+  theme_minimal()
+######################################
 
 
 # Questão 1
