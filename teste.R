@@ -202,3 +202,8 @@ ggplot(df_q3, aes(x=as.factor(Idades),y=Mediadp, fill=Idades)) +
   scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1), # remove a escala numérica da média
                      labels = c("Menos sintomas\nde depressão", "", "", "", "Mais sintomas\nde depressão")) + #adiciona nova legenda ao y
   theme(legend.position = 'none') # remove legenda à direita
+
+# Questão 5
+# Scatter plot com v76 e a depreção
+
+plot(df$v76,df$Mediadp)
