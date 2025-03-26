@@ -105,6 +105,66 @@ ftable_gen <- color(ftable_gen, color = "white", part = "header")
 ftable_gen <- autofit(ftable_gen) 
 ftable_gen
 
+##################################
+# Tabela com valores absolutos e percentuais sobre idades (uni variada)
+idade_n <- table(df$Idades)
+idade_n
+
+# Tabela com códigos atualizados
+idade_n <- table(df$Idades)
+idade_n
+
+# Criação da tabela com Frequências relativas
+percen <- round((prop.table(idade_n)*100),1)
+percen
+
+# Tabela Final 
+tab_Idadess <- rbind(idade_n,percen)
+tab_Idadess
+
+# Criação de FlexTable. Univariada com o objetivo de entender a % de idades da amostra.
+# Definição de numeric as frequencias absolutas
+um_n <- as.numeric(idade_n[1])
+dois_n <- as.numeric(idade_n[2])
+tres_n <- as.numeric(idade_n[3])
+quatro_n <- as.numeric(idade_n[4])
+cinco_n <- as.numeric(idade_n[5])
+seis_n <- as.numeric(idade_n[6])
+sete_n <- as.numeric(idade_n[7])
+oito_n <- as.numeric(idade_n[8])
+nove_n <- as.numeric(idade_n[9])
+dez_n <- as.numeric(idade_n[10])
+
+# Definição de numeric as frequencias relativas
+um_p <- as.numeric(percen[1])
+dois_p<- as.numeric(percen[2])
+tres_p <- as.numeric(percen[3])
+quatro_p <- as.numeric(percen[4])
+cinco_p <- as.numeric(percen[5])
+seis_p <- as.numeric(percen[6])
+sete_p <- as.numeric(percen[7])
+oito_p <- as.numeric(percen[8])
+nove_p <- as.numeric(percen[9])
+dez_p <- as.numeric(percen[10])
+
+# Criação dos headers
+Idades <- c("11","12","13","14","15","16","17","18","19","20")
+Percentagem <- c(um_p, dois_p, tres_p, quatro_p, cinco_p, seis_p, sete_p, oito_p, nove_p, dez_p)
+n <- c(um_n,dois_n,tres_n,quatro_n,cinco_n,seis_n,sete_n,oito_n,nove_n,dez_n)
+
+table_idade <- data.frame(Idades,n, Percentagem)
+ftable_idade <- flextable(table_idade)
+ftable_idade
+
+# Customização da flextable
+ftable_idade <- bg(ftable_idade, bg = "#3895D3", part = "header")
+ftable_idade
+ftable_idade <- color(ftable_idade, color = "white", part = "header")
+ftable_idade <- autofit(ftable_idade) 
+ftable_idade
+
+#############################################
+
 # Medidas descritivas de uma variável quantitativa: Horas de sono
 class(df$Horas.de.Sono)
 mean(df$Horas.de.Sono)
@@ -123,7 +183,7 @@ thirdqt <- round(quantile(df$Horas.de.Sono, 0.75, na.rm=TRUE), 1)
 assimetria <- round(skewness(df$Horas.de.Sono, na.rm=TRUE),1)
 curtose <- round(kurtosis(df$Horas.de.Sono, na.rm=TRUE),1)
 
-############################################
+
 # construção do data frame para a tebela de medidas descritivas
 table_agreg <- data.frame(
   Estatística = c("Média",
