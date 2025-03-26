@@ -108,6 +108,11 @@ ftable_gen <- autofit(ftable_gen)
 ftable_gen
 
 ##################################
+
+#criação da tabela med Idades
+
+##################################
+
 # Tabela com valores absolutos e percentuais sobre idades (uni variada)
 idade_n <- table(df$Idades)
 idade_n
@@ -167,6 +172,10 @@ ftable_idade
 
 #############################################
 
+#Medidas descritivas
+
+##############################################
+
 # Medidas descritivas de uma variável quantitativa: Horas de sono
 class(df$Horas.de.Sono)
 mean(df$Horas.de.Sono)
@@ -224,9 +233,13 @@ ftab_desc_sono <- color(ftab_desc_sono, color = "white", part = "header")
 ftab_desc_sono <- autofit(ftab_desc_sono)
 ftab_desc_sono
 summary(df$Horas.de.Sono)
+
+
 ############################################
 
 #boxplot med idade
+
+#############################################
 #calculo da medida da tabela Idades
 media_idade <- mean(df$Idades, na.rm = TRUE)
 
@@ -234,17 +247,32 @@ media_idade <- mean(df$Idades, na.rm = TRUE)
 df_media <- data.frame(Grupo = "Média das Idades", Idades = media_idade)
 
 #criar o boxplot 
-ggplot(df, aes(y = Idades)) + geom_boxplot() + 
-  labs(title = "Boxplot das Idades", y = "Idades") +
+ggplot(df, aes(y = Idades)) +
+  geom_boxplot(fill = "lightblue", color = "black") +  # Boxplot das idades
+  geom_hline(yintercept = media_idade, color = "red", linetype = "dashed", size = 1) +  # Linha da média
+  geom_text(aes(x = 1, y = media_idade, label = round(media_idade, 2)), 
+            color = "red", vjust = -1.5, size = 5) +  # Texto da média
+  labs(title = "Boxplot das Idades com Média", y = "Idades") +
   theme_minimal()
+
 ######################################
 
-
 # Questão 1
+
+######################################
 # Histograma das Horas de Sono
-Histogram_H_Sono <- ggplot(data=df, aes(Horas.de.Sono))+geom_bar()
+# Criar o histograma
+Histogram_H_Sono <- ggplot(data = df, aes(x = Horas.de.Sono)) +
+  geom_bar(fill = 'skyblue', color = "black") +
+  theme_minimal() +
+  xlab("Horas de Sono") + 
+  ylab("Frequência") +
+  geom_text(stat = "count", aes(label = ..count..), vjust = -0.5, size = 5, color = "black")  # Adiciona os valores
+
+# Exibir o gráfico
 Histogram_H_Sono
-Histogram_H_Sono+geom_bar(fill='skyblue')+ theme_minimal()+xlab("Horas de Sono") + ylab("Frequência")
+
+#######################################
 
 # Histograma das idades
 <<<<<<< HEAD
@@ -253,7 +281,13 @@ h_idades <- hist(df$Idades,breaks = c(10,12,14,16,18,20), col=c("Light blue", "d
 hist(df$Idades,breaks = c(10,12,14,16,20), col=c("Light blue", "darkblue","blue","navy"))
 >>>>>>> 64cfd4d6b73657827741207f4ee80cb3dec10aa2
 
+
+#########################################
+
 # Questão 2
+
+###########################################
+
 # Gráfico de Barras - Género vs Depressão
 # Criação da coluna Média de respostas de depressão
 df$Mediadp <- (df$v39 + df$v41 + df$v46 + df$v49 + df$v52 + df$v53 + df$v57)/7
@@ -272,7 +306,12 @@ ggplot(df_q2, aes(x=Genero,y=Mediadp, fill=Genero)) +
 df_q3 <- df
 df_q3 <- df%>% filter(!(Idades %in% c(19,20)))
 
+#################################
+
 # Questão 4
+
+################################3
+
 # Gráfico de barras para analise das médias de depressão por idade
 ggplot(df_q3, aes(x=as.factor(Idades),y=Mediadp, fill=Idades)) +
   stat_summary(fun = mean, geom = "bar") +
