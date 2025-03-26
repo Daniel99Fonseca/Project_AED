@@ -123,7 +123,8 @@ thirdqt <- round(quantile(df$Horas.de.Sono, 0.75, na.rm=TRUE), 1)
 assimetria <- round(skewness(df$Horas.de.Sono, na.rm=TRUE),1)
 curtose <- round(kurtosis(df$Horas.de.Sono, na.rm=TRUE),1)
 
-# construção da tabela de medidas descritivas
+############################################
+# construção do data frame para a tebela de medidas descritivas
 table_agreg <- data.frame(
   Estatística = c("Média",
                   "Mediana",
@@ -147,33 +148,34 @@ table_agreg <- data.frame(
             curtose)
 )
 
-#########################
-ftab_agreg <- flextable(table_agreg)
-ftab_agreg
+# construção da tabela de medidas descritivas
+ftab_desc_sono <- flextable(table_agreg)
+ftab_desc_sono
 
 #cor no fundo do cabeçalho - bg
 #codigo de cores
-ftab_agreg <- bg(ftab_agreg, bg = "#3895D3", part = "header")
-ftab_agreg
+ftab_desc_sono <- bg(ftab_desc_sono, bg = "#3895D3", part = "header")
+ftab_desc_sono
 
 #cor da letra do cabeçalho em branco
-ftab_agreg <- color(ftab_agreg, color = "white", part = "header")
-ftab_agreg <- autofit(ftab_agreg)
-ftab_agreg
+ftab_desc_sono <- color(ftab_desc_sono, color = "white", part = "header")
+ftab_desc_sono <- autofit(ftab_desc_sono)
+ftab_desc_sono
 summary(df$Horas.de.Sono)
+
 
 # Questão 1
 # Histograma das Horas de Sono
 Histogram_H_Sono <- ggplot(data=df, aes(Horas.de.Sono))+geom_bar()
 Histogram_H_Sono
 Histogram_H_Sono+geom_bar(fill='skyblue')+ theme_minimal()+xlab("Horas de Sono") + ylab("Frequência")
-# FAZER BARRAS 4,5 E 6 NUMA SÓ
-# FAZER BARRAS 4,5 E 6 NUMA SÓ
 
 # Histograma das idades
-Histogram_idades <- ggplot(data=df, aes(Idades))+geom_bar()
-Histogram_idades
-Histogram_idades+geom_bar(fill='skyblue')+ theme_minimal()+xlab("Idades") + ylab("Frequência")
+<<<<<<< HEAD
+h_idades <- hist(df$Idades,breaks = c(10,12,14,16,18,20), col=c("Light blue", "darkblue","blue","navy"))
+=======
+hist(df$Idades,breaks = c(10,12,14,16,20), col=c("Light blue", "darkblue","blue","navy"))
+>>>>>>> 64cfd4d6b73657827741207f4ee80cb3dec10aa2
 
 # Questão 2
 # Gráfico de Barras - Género vs Depressão
@@ -183,7 +185,7 @@ df$Mediadp <- (df$v39 + df$v41 + df$v46 + df$v49 + df$v52 + df$v53 + df$v57)/7
 # Aplicação de filtro para obter apenas Genero Masculino e Feminino
 df_q2 <- df %>% filter(Genero %in% c("Masculino", "Feminino"))
 
-# Criação do gráfico de barras
+# Criação do gráfico de barras de Género e Depressão
 ggplot(df_q2, aes(x=Genero,y=Mediadp, fill=Genero)) +
   stat_summary(fun = mean, geom = "bar") +
   labs(title="Relação entre Género e Depressão",x="Género",y="Média de Níveis de Depressão") +
@@ -194,6 +196,7 @@ ggplot(df_q2, aes(x=Genero,y=Mediadp, fill=Genero)) +
 df_q3 <- df
 df_q3 <- df%>% filter(!(Idades %in% c(19,20)))
 
+# Questão 4
 # Gráfico de barras para analise das médias de depressão por idade
 ggplot(df_q3, aes(x=as.factor(Idades),y=Mediadp, fill=Idades)) +
   stat_summary(fun = mean, geom = "bar") +
@@ -201,4 +204,3 @@ ggplot(df_q3, aes(x=as.factor(Idades),y=Mediadp, fill=Idades)) +
   scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1), # remove a escala numérica da média
                      labels = c("Menos sintomas\nde depressão", "", "", "", "Mais sintomas\nde depressão")) + #adiciona nova legenda ao y
   theme(legend.position = 'none') # remove legenda à direita
-
