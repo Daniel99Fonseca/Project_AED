@@ -317,12 +317,6 @@ ggplot(df_q3, aes(x=Horas.de.Sono,y=Mediadp)) +
 ################################3
 
 # Gráfico de barras para analise das médias de depressão por idade
-ggplot(df_q3, aes(x=as.factor(Idades),y=Mediadp, fill=Idades)) +
-  stat_summary(fun = mean, geom = "bar") +
-  labs(title="Relação entre Idade e Depressão",x="Idade",y="Média de Níveis de Depressão") +
-  scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1), # remove a escala numérica da média
-                     labels = c("Menos sintomas\nde depressão", "", "", "", "Mais sintomas\nde depressão")) + #adiciona nova legenda ao y
-  theme(legend.position = 'none') # remove legenda à direita
 
 
 ggplot(df_q3, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades))) +
