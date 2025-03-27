@@ -301,6 +301,15 @@ ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
 df_q3 <- df
 df_q3 <- df%>% filter(!(Idades %in% c(19,20)))
 
+#questão 3 
+# Criação do gráfico de dispersão de Horas de Sono e Depressão
+
+ggplot(df_q3, aes(x=Horas.de.Sono,y=Mediadp)) +
+  geom_point() +
+  labs(title="Relação entre Horas de Sono e Depressão",x="Horas de Sono",y="Média de Níveis de Depressão") +
+  theme_minimal()
+
+
 #################################
 
 # Questão 4
