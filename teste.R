@@ -207,3 +207,4 @@ ggplot(df_q3, aes(x=as.factor(Idades),y=Mediadp, fill=Idades)) +
 # Scatter plot com v76 e a depreção
 
 plot(df$v76,df$Mediadp)
+
