@@ -315,10 +315,6 @@ ggplot(df_q3, aes(x=as.factor(Idades),y=Mediadp, fill=Idades)) +
                      labels = c("Menos sintomas\nde depressão", "", "", "", "Mais sintomas\nde depressão")) + #adiciona nova legenda ao y
   theme(legend.position = 'none') # remove legenda à direita
 
-# Questão 5
-# Scatter plot com v76 e a depreção
-
-plot(df$v76,df$Mediadp)
 
 ggplot(df_q3, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades))) +
   stat_summary(fun = mean, geom = "bar") +  # Criar as barras com a média
@@ -331,3 +327,8 @@ ggplot(df_q3, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades)))
                      labels = c("Menos sintomas\nde depressão", "", "", "", "Mais sintomas\nde depressão")) +  
   theme_minimal() +
   theme(legend.position = "none")  # Remove a legenda
+
+# Questão 5
+# Scatter plot com v76 e a depressão
+
+plot(df$v76,df$Mediadp)
