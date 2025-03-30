@@ -90,11 +90,11 @@ outro_p <- as.numeric(percen[3])
 nao_resp_p <- as.numeric(percen[4])
 
 # Criação dos headers
-Genero <- c("Masculino", "Feminino", "Outro", "Não respondeu")
+Género <- c("Masculino", "Feminino", "Outro", "Não respondeu")
 Percentagem <- c(masc_p, fem_p, outro_p, nao_resp_p)
 n <- c(masc_n,fem_n,outro_n,nao_resp_n)
 
-table_gen <- data.frame(Genero,n, Percentagem)
+table_gen <- data.frame(Género,n, Percentagem)
 ftable_gen <- flextable(table_gen)
 ftable_gen
 

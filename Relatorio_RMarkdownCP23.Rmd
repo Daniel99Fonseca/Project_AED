@@ -62,13 +62,13 @@ A estrutura do inquérito incluía uma série de questões relacionadas com sint
 ftable_gen
 ```
   
-  **Figura 1:** Distribuição dos géneros entre os alunos questionados.  
+  **Figura 1:** Distribuição dos géneros entre os alunos questionados  
   
 ```{r echo=FALSE}
 bplot_age
 ```
 
-   **Figura 2:** Distribuição das idades entre os alunos questionados.   
+   **Figura 2:** Distribuição das idades entre os alunos questionados   
   
 # Horas de sono dos alunos
 
@@ -87,7 +87,7 @@ Este resultado sugere que, em média, os alunos dormem o número de horas adequa
 
 # Relação entre género e sintomas depressivos  
 
-O gráfico seguinte apresenta a média das respostas às questões sobre sintomas depressivos, segmentadas por género.  
+O gráfico seguinte apresenta a média das respostas às questões sobre sintomas depressivos, segmentadas por género:  
 
 ```{r echo=FALSE}
 
@@ -113,7 +113,7 @@ Desta forma, podemos então concluir que por um aluno dormir mais (ou menos) nã
 # Será que existe alguma faixa etária com maiores níveis de depressão?  
  
 A partir de uma certa faixa etária, aliado à puberdade vivenciada por todos os adolescentes, com níveis acrescidos de responsabilidades, assim como possível pressão em entrar no mundo universitário e terminar um ciclo escolar, seria expetável que inquiridos mais velhos apresentassem maiores níveis de depressão. 
-  O gráfico seguinte ilustra a média dos níveis de depressão por faixa etária.
+  O gráfico seguinte ilustra a média dos níveis de depressão por faixa etária:
   
 ```{r echo=FALSE}
 dp_v_idade
