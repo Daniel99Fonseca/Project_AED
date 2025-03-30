@@ -65,7 +65,6 @@ O inquérito aos alunos era constituído pelas seguintes perguntas:
   Os alunos, nestas questões respondiam numa escala de 0 (Não se aplicou a mim) a 3 (Aplicou-se a mim na maior parte do tempo), de acordo com o quanto (ou nada) se identificavam com o sentimento.
   Por fim, eram questionados sobre quantas horas, em média, dormem por noite.
   
-
 # Horas de sono dos alunos
 
   Inicialmente, deparados com esta base de dados, a intuição foi analisar as horas de sono, dado que (em certa parte, estereotipicamente) os sintomas depressivos estão relacionados com as horas de sono. No caso prático em questão, devido ao panorama *Covid-19*, ao estarem confinados em casa, seria de esperar que os alunos dormissem mais horas que o habitual, devido à transição para uma rotina mais monótona e com menos atividade física presente nas suas vidas.
