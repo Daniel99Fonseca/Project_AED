@@ -3,7 +3,10 @@ title: "Relatório Caso Prático 23"
 author: "Grupo 23"
 date: "`r Sys.Date()`"
 output:
-  html_document: default
+  html_document:
+    toc: true
+    toc_depth: 6
+    number_sections: true
   pdf_document: default
 ---
 
@@ -26,11 +29,11 @@ O presente relatório é baseado numa análise exploratória de dados, tendo com
 
 Para que tal seja possível, de forma grupal, decidimos focar em alguns tópicos, em forma de questões à base de dados, de forma a analisar possíveis correlações, nomeadamente: 
 
-  1. Primeiramente, de forma a entender e conhecer a nossa amostra, pretendemos analisar a distribuição das horas de sono da nossa amostra.  
-  2.O género influencia as respostas relacionadas com a saúde psicológica e bem-estar? Existem diferenças significativas nos sintomas de depressão entre rapazes e raparigas?  
-  3. Existe uma correlação entre as horas de sono dos alunos e os sintomas de depressão?  
-  4. Há alguma faixa etária com sintomas depressivos mais predominante?  
-  5. Por fim, é possível observar uma relação entre uma das questões propostas "Eu preocupo-me com muitas coisas" e sintomas depressivos?
+  **1.** Primeiramente, de forma a entender e conhecer a nossa amostra, pretendemos analisar a distribuição das horas de sono da nossa amostra.  
+  **2.**O género influencia as respostas relacionadas com a saúde psicológica e bem-estar? Existem diferenças significativas nos sintomas de depressão entre rapazes e raparigas?  
+  **3.** Existe uma correlação entre as horas de sono dos alunos e os sintomas de depressão?  
+  **4.** Há alguma faixa etária com sintomas depressivos mais predominante?  
+  **5.** Por fim, é possível observar uma relação entre uma das questões propostas "Eu preocupo-me com muitas coisas" e sintomas depressivos?
 
 # A amostra
 
@@ -44,7 +47,7 @@ ftable_gen
 
 Os alunos questionados encontram-se no 3º e 4º ciclo, com idades entre os **`r min_age`** e **`r  max_age`**. Em média, o aluno questionado tem **`r media_idade`** anos.
 
-O inquérito aos alunos era constituído pelas seguintes perguntas:    
+O inquérito aos alunos era constituído pelas seguintes perguntas:     
   **1.** Não consegui sentir nenhum sentimento positivo.  
   **2.** Tive muita dificuldade em ter iniciativa para fazer coisas.  
   **3.** Senti que não tinha nada a esperar do futuro.  
@@ -71,6 +74,6 @@ Bar_H_Sono
    
 O presente gráfico apresenta uma distribuição normal, envieseada à esquerda.
 
-Desta forma, podemos inferir que, em média, os alunos tendem a dormir o número de horas recomendadas (8) dado que este é o número de horas dormidas com maior frequência entre os alunos.   
-Por conseguinte, também devido à hipótese apresentada anteriormente de os alunos, devido à pandemia estarem mais confinados em casa, podemos inferir que dormem bastante horas, sendo que a esmagadora maioria dorme acima de 7 horas por noite.  
+Desta forma, podemos inferir que, em média, os alunos tendem a dormir o número de horas recomendadas (**8**) dado que este é o número de horas dormidas com maior frequência entre os alunos.   
+Por conseguinte, também devido à hipótese apresentada anteriormente de os alunos, devido à pandemia estarem mais confinados em casa, podemos inferir que dormem bastante horas, sendo que a esmagadora maioria dorme acima de **7** horas por noite.  
 
