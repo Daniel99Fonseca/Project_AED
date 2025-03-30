@@ -57,6 +57,9 @@ O inquérito aos alunos era constituído pelas seguintes perguntas:
   Os alunos, nestas questões respondiam numa escala, de acordo com o quanto (ou nada) se identificavam com o sentimento.   
   Por fim, eram questionados sobre quantas horas, em média, dormem por noite.
   
+  
+# 1. Horas de sono dos alunos
+
   Inicialmente, deparados com esta base de dados, a intuição foi analisar as horas de sono, dado que (em certa parte, estereotipicamente) os sintomas depressivos estão relacionados com as horas de sono. No caso prático em questão, devido ao panorama *Covid-19*, ao estarem confinados em casa, seria de esperar que os alunos dormissem mais horas que o habitual, devido à transição para uma rotina mais monótona e com menos atividade física presente nas suas vidas.
 ```{r echo=FALSE}
 
@@ -67,4 +70,7 @@ Bar_H_Sono
    **Figura 2:** Distribuição horas de sono dos alunos   
    
 O presente gráfico apresenta uma distribuição normal, envieseada à esquerda.
+
+Desta forma, podemos inferir que, em média, os alunos tendem a dormir o número de horas recomendadas (8) dado que este é o número de horas dormidas com maior frequência entre os alunos.   
+Por conseguinte, também devido à hipótese apresentada anteriormente de os alunos, devido à pandemia estarem mais confinados em casa, podemos inferir que dormem bastante horas, sendo que a esmagadora maioria dorme acima de 7 horas por noite.  
 
