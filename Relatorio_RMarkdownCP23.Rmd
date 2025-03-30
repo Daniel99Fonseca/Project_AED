@@ -83,7 +83,7 @@ Bar_H_Sono
    
    **Figura 3:** Distribuição horas de sono dos alunos   
 
-Este resultado sugere que, em média, os alunos dormem um número de horas adequado às recomendações para a sua faixa etária, o defende a ideia de que a rotina na pandemia pode ter levado a um aumento no número de horas de sono. No entanto, posteriormente iremos analisar se este parâmetro implica sintomas mais ou menos depressivos ou vice versa.
+Este resultado sugere que, em média, os alunos dormem o número de horas adequado às recomendações para a sua faixa etária, o que defende a ideia de que a rotina na pandemia pode ter levado a um aumento no número de horas dormidas. No entanto, posteriormente iremos analisar se este parâmetro implica sintomas mais ou menos depressivos ou vice versa.
 
 # Relação entre género e sintomas depressivos  
 
@@ -106,9 +106,9 @@ No entanto, essa diferença pode refletir um maior impacto psicológico das cond
 
 Para analisar a relação entre as horas de sono e os sintomas de depressão, foi utilizado um gráfico de dispersão. 
 
-Uma das hipóteses iniciais fundava-se na ideia de que a quantidade de horas dormidas teria uma influência direta nos sintomas depressivos. No entanto, ao analisar a correlação entre as horas de sono e os níveis de sintomas depressivos, não foi possível identificar uma relação clara entre estas duas variáveis. O gráfico de dispersão gerado revelou uma distribuição dos dados sem padrões evidentes, indicando que o número de horas dormidas, por si só, não parece ser um fator determinante no desenvolvimento de sintomas depressivos.
+Uma das hipóteses iniciais fundava-se na ideia de que a quantidade de horas dormidas teria uma influência direta nos sintomas depressivos. No entanto, ao analisar a correlação estas variáveis, não foi possível identificar uma relação clara. Os resultados revelaram uma distribuição dos dados sem padrões evidentes, indicando que o número de horas dormidas, por si só, não parece ser um fator determinante no desenvolvimento de sintomas depressivos.
 
-Desta forma, podemos então concluir que por um aluno dormir mais (ou menos) não necessariamente implica que este vá desenvolver sintomas depressivos nem um aluno que tem sintomas depressivos dorme mais (ou menos) horas.
+Desta forma, podemos então concluir que por um aluno dormir mais (ou menos) não necessariamente implica que vá desenvolver sintomas depressivos nem vice-versa.
 
 # Será que existe alguma faixa etária com maiores níveis de depressão?  
  
@@ -121,15 +121,17 @@ dp_v_idade
  
 **Figura 5:** Relação entre idades e depressão
 
-Desta forma podemos observar que, pós pandemia, como esperado, os inquiridos mais velhos possuem maiores níveis de depressão, apesar da faixa etária de 17 anos apresentou resultados fora do que seria esperado, mostrando menores níveis de depressão.
+Desta forma podemos observar que, pós pandemia, como esperado, há uma tendência crescente de sintomas depressivos à medida que a idade aumenta. Apesar desta tese, a faixa etária de 17 anos apresentou resultados fora da tendência, mostrando menores níveis de depressão.
 
 # Relação entre a a preocupação excessiva e sintomas depressivos
 Foi analisada a relação entre a questão "Eu preocupo-me com muitas coisas" e os sintomas depressivos, recorrendo a um gráfico de dispersão. No entanto, não foi possível identificar uma correlação clara entre as respostas à questão e os sintomas de depressão.
 
-Esse resultado sugere que a preocupação excessiva pode não estar diretamente relacionada à depressão, mas sim a outros quadros emocionais, como a ansiedade. Enquanto a depressão se caracteriza por sintomas como tristeza profunda, apatia e perda de interesse, a ansiedade envolve frequentemente um estado de alerta constante e preocupações excessivas sobre múltiplos aspetos da vida.
+Este resultado sugere que a preocupação excessiva pode não estar diretamente relacionada à depressão, mas sim a outros quadros emocionais, como a ansiedade. Enquanto a depressão se caracteriza por sintomas como tristeza profunda, apatia e perda de interesse, a ansiedade envolve frequentemente um estado de alerta constante e preocupações excessivas sobre múltiplos aspetos da vida.
 
-Além disso, é possível que a preocupação excessiva esteja mais ligada ao stresse crónico ou a padrões individuais de personalidade do que à depressão propriamente dita. Embora ambas as condições possam coexistir em alguns casos, a preocupação com muitas coisas não parece ser um indicador fiável de sintomas depressivos.
+Além disso, é possível que a preocupação excessiva esteja mais ligada ao stresse ou a padrões individuais de personalidade do que à depressão propriamente dita.
+
 
 # Conclusão
 
-Este estudo exploratório forneceu uma visão detalhada sobre a saúde psicológica de alguns alunos da região Norte de Portugal, com foco nas variáveis de horas de sono, gênero, idade e sintomas depressivos. Embora alguns resultados tenham sido consistentes com as expectativas, como a tendência de aumento da depressão com a idade, também podemos concluir que há maior prevalência de sintomas depressivos entre as raparigas, outras análises, como a relação entre horas de sono e depressão, não apresentaram resultados conclusivos. Estes achados destacam a complexidade da saúde mental juvenil e que a pandemia da Covid-19 afetou as crianças e adolescentes de muitas formas diferentes.
+A análise dos dados coletados permitiu uma visão abrangente sobre os fatores que afetam a saúde psicológica dos alunos da região Norte de Portugal, com destaque para a relação entre género, idade e sintomas depressivos.
+Embora alguns resultados tenham sido consistentes com as expectativas, a maior prevalência de sintomas depressivos entre as raparigas e a tendência crescente de depressão com a idade são questões que merecem maior atenção nas estratégias de apoio psicológico. Outras análises, como a relação entre horas de sono e depressão, não apresentaram resultados conclusivos. A pesquisa sublinha a necessidade de um acompanhamento mais personalizado para os alunos, de forma a atender às suas necessidades emocionais específicas, especialmente em tempos de crise, como foi o caso da pandemia.

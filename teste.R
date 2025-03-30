@@ -258,9 +258,13 @@ bplot_age <- ggplot(df, aes(y = Idades)) +
   annotate("text", x = 1, y = media_idade, label = round(media_idade, 2), 
            color = "red", vjust = -1.5, size = 5) +  # Texto da média
   labs(title = "Boxplot das Idades com Média", y = "Idades") +
-  theme_minimal()
+  theme_minimal() + 
+  theme(axis.title.x = element_blank(), 
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank())
 
 bplot_age
+
 ######################################
 
 # Questão 1
