@@ -301,6 +301,7 @@ ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
        x = "Género",
        y = "Média de Níveis de Depressão") +
   scale_fill_manual(values = c("blue", "pink")) +
+  expand_limits(y=1)
   theme_minimal()
 
 # Remover Idades 19 e 20 por haver apenas 1 de cada, resultando numa média "biased" em relação a estas idades
@@ -320,12 +321,8 @@ sono_e_dep <- ggplot(na.omit(df_q3), aes(x=Horas.de.Sono,y=Mediadp)) +
   labs(title="Relação entre Horas de Sono e Depressão",x="Horas de Sono",y="Média de Níveis de Depressão") +
   theme_minimal()
 
-<<<<<<< HEAD
-=======
 sono_e_dep
 
-
->>>>>>> 8d67e241c0ca42932daa2bb2fa1ed8837d965226
 #################################
 
 # Questão 4
