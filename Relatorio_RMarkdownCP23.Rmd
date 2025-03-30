@@ -58,12 +58,17 @@ A estrutura do inquérito incluía uma série de questões relacionadas com sint
   A amostra deste estudo é composta por **`r nrow(df)`** alunos, da região **Norte** de Portugal. Apresenta uma distribuição de género bastante proporcional, sendo **`r masc_p`%** masculino e **`r fem_p`%** feminino. O restante da amostra, identifica-se como outro **`r outro_p`%** e **`r nao_resp_p`%** não respondeu a esta questão.
   Os alunos questionados encontram-se no 3º e 4º ciclo do ensino básico, com idades entre os **`r min_age`** e **`r  max_age`**. Em média, a idade do aluno questionado é **`r media_idade`** anos.
 
-```{r echo=FALSE, fig.cap="Distribuição dos géneros entre os alunos questionados."}
+```{r echo=FALSE}
 ftable_gen
+```
+  
+  **Figura 1:** Distribuição dos géneros entre os alunos questionados.  
+  
+```{r echo=FALSE}
 bplot_age
 ```
 
-   **Figura 1:** Distribuição dos géneros entre os alunos questionados.   
+   **Figura 2:** Distribuição das idades entre os alunos questionados.   
   
 # Horas de sono dos alunos
 
@@ -76,20 +81,21 @@ Bar_H_Sono
 
 ```
    
-   **Figura 2:** Distribuição horas de sono dos alunos   
+   **Figura 3:** Distribuição horas de sono dos alunos   
 
 Este resultado sugere que, em média, os alunos dormem um número de horas adequado às recomendações para a sua faixa etária, o defende a ideia de que a rotina na pandemia pode ter levado a um aumento no número de horas de sono. No entanto, posteriormente iremos analisar se este parâmetro implica sintomas mais ou menos depressivos ou vice versa.
 
 # Relação entre género e sintomas depressivos  
 
-O gráfico seguinte apresenta a média das respostas às questões sobre sintomas depressivos, segmentadas por género.
+O gráfico seguinte apresenta a média das respostas às questões sobre sintomas depressivos, segmentadas por género.  
+
 ```{r echo=FALSE}
 
 gen_v_dep
 
 ```
 
-**Figura 3:** Relação entre média de respostas a sintomas depressivos e género
+**Figura 4:** Relação entre média de respostas a sintomas depressivos e género
 
 É possível observar que o género feminino apresenta mais sintomas depressivos, com uma média de **0.93** por resposta, numa escala de 0 a 3, enquanto o género masculino apresenta uma média por resposta de **0.46**. 
 Apesar de não ser um valor elevado em termos absolutos, a diferença relativa sugere que o género feminino é mais propenso a sentir sintomas depressivos.
@@ -113,7 +119,7 @@ A partir de uma certa faixa etária, aliado à puberdade vivenciada por todos os
 dp_v_idade
 ```
  
-**Figura 4:** Relação entre idades e depressão
+**Figura 5:** Relação entre idades e depressão
 
 Desta forma podemos observar que, pós pandemia, como esperado, os inquiridos mais velhos possuem maiores níveis de depressão, apesar da faixa etária de 17 anos apresentou resultados fora do que seria esperado, mostrando menores níveis de depressão.
 
