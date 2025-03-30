@@ -23,8 +23,6 @@ df <- read.xlsx("AED_CP23_Saude_Copia.xlsx")
 knitr::opts_chunk$set(echo=FALSE)
 getwd()
 ```
-
-
 ![](iscte.PNG)
 
 # Introdução
@@ -36,10 +34,10 @@ O presente relatório é baseado numa análise exploratória de dados, tendo com
 Para que tal seja possível, de forma grupal, decidimos focar em alguns tópicos, em forma de questões à base de dados, de forma a analisar possíveis correlações, nomeadamente: 
 
   **1.** Primeiramente, de forma a entender e conhecer a nossa amostra, pretendemos analisar a distribuição das horas de sono da nossa amostra.  
-  **2.** O género influencia as respostas relacionadas com a saúde psicológica e bem-estar? Existem diferenças significativas nos sintomas de depressão entre rapazes e raparigas?
-  **3.** Existe uma correlação entre as horas de sono dos alunos e os sintomas de depressão?
-  **4.** Há alguma faixa etária com sintomas depressivos mais predominante?
-  **5.** Por fim, é possível observar uma relação entre uma das questões propostas "Eu preocupo-me com muitas coisas" e sintomas depressivos?
+  **2.** O género influencia as respostas relacionadas com a saúde psicológica e bem-estar? Existem diferenças significativas nos sintomas de depressão entre rapazes e raparigas?  
+  **3.** Existe uma correlação entre as horas de sono dos alunos e os sintomas de depressão?  
+  **4.** Há alguma faixa etária com sintomas depressivos mais predominante?  
+  **5.** Por fim, é possível observar uma relação entre uma das questões propostas "Eu preocupo-me com muitas coisas" e sintomas depressivos?  
 
 # A amostra
 
@@ -51,23 +49,24 @@ ftable_gen
 
    **Figura 1:** Distribuição dos géneros entre os alunos questionados.   
 
-Os alunos questionados encontram-se no 3º e 4º ciclo, com idades entre os **`r min_age`** e **`r  max_age`**. Em média, o aluno questionado tem **`r media_idade`** anos.
+Os alunos questionados encontram-se no 3º e 4º ciclo, com idades entre os **`r min_age`** e **`r  max_age`**. Em média, a idade do aluno questionado é **`r media_idade`** anos.
 
-O inquérito aos alunos era constituído pelas seguintes perguntas:     
-  **1.** Não consegui sentir nenhum sentimento positivo.  
-  **2.** Tive muita dificuldade em ter iniciativa para fazer coisas.  
-  **3.** Senti que não tinha nada a esperar do futuro.  
-  **4.** Senti-me triste e deprimido.    
-  **5.** Não fui capaz de ter entusiasmo para nada.  
-  **6.** Senti que não tinha muito valor como pessoa.  
-  **7.** Senti que não vale a pena viver.  
-  **8.** Eu preocupo-me com muitas coisas.  
+O inquérito aos alunos era constituído pelas seguintes perguntas:  
+
+**1.** Não consegui sentir nenhum sentimento positivo.  
+**2.** Tive muita dificuldade em ter iniciativa para fazer coisas.  
+**3.** Senti que não tinha nada a esperar do futuro.   
+**4.** Senti-me triste e deprimido.  
+**5.** Não fui capaz de ter entusiasmo para nada.  
+**6.** Senti que não tinha muito valor como pessoa.  
+**7.** Senti que não vale a pena viver.  
+**8.** Eu preocupo-me com muitas coisas.  
   
-  Os alunos, nestas questões respondiam numa escala, de acordo com o quanto (ou nada) se identificavam com o sentimento.   
+  Os alunos, nestas questões respondiam numa escala de 0 (Não se aplicou a mim) a 3 (Aplicou-se a mim na maior parte do tempo), de acordo com o quanto (ou nada) se identificavam com o sentimento.
   Por fim, eram questionados sobre quantas horas, em média, dormem por noite.
   
-  
-# 1. Horas de sono dos alunos
+
+# Horas de sono dos alunos
 
   Inicialmente, deparados com esta base de dados, a intuição foi analisar as horas de sono, dado que (em certa parte, estereotipicamente) os sintomas depressivos estão relacionados com as horas de sono. No caso prático em questão, devido ao panorama *Covid-19*, ao estarem confinados em casa, seria de esperar que os alunos dormissem mais horas que o habitual, devido à transição para uma rotina mais monótona e com menos atividade física presente nas suas vidas.
 ```{r echo=FALSE}
@@ -83,8 +82,9 @@ O presente gráfico apresenta uma distribuição normal, envieseada à esquerda.
 Desta forma, podemos inferir que, em média, os alunos tendem a dormir o número de horas recomendadas (**8**) dado que este é o número de horas dormidas com maior frequência entre os alunos.   
 Por conseguinte, também devido à hipótese apresentada anteriormente de os alunos, devido à pandemia estarem mais confinados em casa, podemos inferir que dormem bastante horas, sendo que a esmagadora maioria dorme acima de **7** horas por noite.  
 
-# 2. 
+# Relação entre género e sintomas depressivos
 
+<<<<<<< HEAD
 # 4. Será que existe alguma faixa etária com maiores níveis de depressão?
 
  Com o objetivo de analisar se os sintomas depressivos estão relacionados com a idade, pós pandemia, seria esperado que inquiridos mais velhos apresentassem maiores níveis de depressão.
@@ -97,3 +97,27 @@ Barplot_IdadeDep
    **Figura 4:** Relação entre idades e depressão
  
  Desta forma podemos observar que, pós pandemia, como esperado, os inquiridos mais velhos possuem maiores níveis de depressão, mas podemos observar que a faixa etária de 17 anos apresentou resultados fora do que seria esperado, mostrando menores níveis de depressão de todas as outras faixas etárias exceto a faixa etária de 11 anos.
+=======
+Analisou-se a média das respostas às diversas questões relacionadas com sentimentos depressivos.  
+De seguida, esta média era correlacionada com diferentes variáveis, de forma a encontrar possíveis correlações.  
+Por conseguinte, gerou-se o seguinte gráfico:
+
+```{r echo=FALSE}
+
+gen_v_dep
+
+```
+
+**Figura 3:** Relação entre média de respostas a sintomas depressivos e género
+
+É possível observar que o género feminino apresenta mais sintomas depressivos, com uma média de respostas de **0.93**, numa escala de 0 a 3, enquanto o género masculino apresenta uma média de respostas de **0.46**. 
+
+Consideramos que o número apresentado pelo género feminino não é considerado um número elevado dada a escala em questão.  
+
+No entanto, tendo em conta o contexto do caso prático, em que alunos foram questionados após episódios de confinamento, podemos concluir que o género feminino tem **mais** tendência a desenvolver sentimentos depressivos após vivenciar um panorama como a *Covid-19*.  
+
+# Horas de sono e depressão
+Para analisar a relação entre as horas de sono e os sintomas de depressão, foi utilizado um gráfico de dispersão. No entanto, ao contrário do que era esperado, não foi possível visualizar uma relação clara entre as horas de sono e os sintomas de depressão.  
+
+Desta forma, podemos então concluir que por um aluno dormir mais (ou menos) não necessariamente implica que este vá desenvolver sintomas depressivos nem um aluno que tem sintomas depressivos dorme mais (ou menos) horas.
+>>>>>>> c15b6202ac39eaa5f1468ebe4f6c3016f3729e27
