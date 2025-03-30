@@ -12,7 +12,7 @@ output:
   html_document:
     toc: true
     toc_depth: 6
-    number_sections: true
+    number_sections: false
   pdf_document: default
 ---
 
@@ -85,23 +85,15 @@ Por conseguinte, também devido à hipótese apresentada anteriormente de os alu
 
 # 2. 
 
+# 4. Será que existe alguma faixa etária com maiores níveis de depressão?
 
-
-
-
-
-# 3. Horas de sono e depressao
-Para analisar a relação entre as horas de sono e os sintomas de depressão, foi utilizado um gráfico de dispersão, onde é possível observar a relação entre as variáveis. No entanto, ao contrário do que era esperado, não foi possível visualizar uma relação clara entre as horas de sono e os sintomas de depressão.
-
+ Com o objetivo de analisar se os sintomas depressivos estão relacionados com a idade, pós pandemia, seria esperado que inquiridos mais velhos apresentassem maiores níveis de depressão.
+ Após cruzar as variáveis, Idades e Média de Níveis de Depressão, obtemos o seguinte gráfico:
+ 
 ```{r echo=FALSE}
-
-sono_e_dep
-
+Barplot_IdadeDep
 ```
-   
-   
-   **Figura 4:** Gráfico de dispersão entre as horas de sono e os sintomas de depressão.
 
-
-
-
+   **Figura 4:** Relação entre idades e depressão
+ 
+ Desta forma podemos observar que, pós pandemia, como esperado, os inquiridos mais velhos possuem maiores níveis de depressão, mas podemos observar que a faixa etária de 17 anos apresentou resultados fora do que seria esperado, mostrando menores níveis de depressão de todas as outras faixas etárias exceto a faixa etária de 11 anos.

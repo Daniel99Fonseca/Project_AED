@@ -295,7 +295,7 @@ df_q2 <- df %>% filter(Genero %in% c("Masculino", "Feminino"))
 
 Barplot_GenDep <- ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
   stat_summary(fun = mean, geom = "bar") +  # Criar as barras com a média
-  stat_summary(fun = mean, geom = "text", aes(label = round(..y.., 2)), 
+  stat_summary(fun = mean, geom = "text", aes(label = round(after_stat(y), 2)), 
                vjust = -0.5, size = 5, color = "black") +  # Adicionar os valores acima das barras
   labs(title = "Relação entre Género e Depressão",
        x = "Género",
@@ -337,7 +337,7 @@ df_q4 <- df%>% filter(!(Idades %in% c(19,20)))
 
 Barplot_IdadeDep <- ggplot(df_q4, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades))) +
   stat_summary(fun = mean, geom = "bar") +  # Criar as barras com a média
-  stat_summary(fun = mean, geom = "text", aes(label = round(..y.., 2)), 
+  stat_summary(fun = mean, geom = "text", aes(label = round(after_stat(y), 2)), 
                vjust = -0.5, size = 5, color = "black") +  # Adicionar valores acima das barras
   labs(title = "Relação entre Idade e Depressão",
        x = "Idade",
