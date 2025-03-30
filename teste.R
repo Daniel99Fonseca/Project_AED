@@ -303,19 +303,26 @@ Barplot_GenDep <- ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
   scale_fill_manual(values = c("blue", "pink")) +
   theme_minimal()
 
-# Remover Idades 19 e 20 por haver apenas 1 de cada, resultando numa média "biased" em relação a estas idades
-df_q3 <- df
-df_q3 <- df%>% filter(!(Idades %in% c(19,20)))
+#########################
 
 #Questão 3
 
+#########################
+
+#Remover NA
+df_q3 <- df
+df_q3 <- df%>%filter(!(Horas.de.Sono %in% c(NA)))
+
 # Criação do gráfico de dispersão de Horas de Sono e Depressão
 
-Barplot_SleepDep <- ggplot(df_q3, aes(x=Horas.de.Sono,y=Mediadp)) +
-  geom_point() +
-  labs(title="Relação entre Horas de Sono e Depressão",x="Horas de Sono",y="Média de Níveis de Depressão") +
+Barplot_SleepDep <- ggplot(df_q3, aes(x=as.factor(Horas.de.Sono),y=Mediadp)) +
+  geom_col(stat = "identity", fill = "black") +
+  labs(title="Relação entre Horas de Sono e Depressão",
+       x="Horas de Sono",
+       y="Média de Níveis de Depressão") +
   theme_minimal()
 
+Barplot_SleepDep
 
 #################################
 
@@ -323,10 +330,13 @@ Barplot_SleepDep <- ggplot(df_q3, aes(x=Horas.de.Sono,y=Mediadp)) +
 
 ################################
 
+# Remover Idades 19 e 20 por haver apenas 1 de cada, resultando numa média "biased" em relação a estas idades (existe apenas 1 inquirido de cada)
+df_q4 <- df
+df_q4 <- df%>% filter(!(Idades %in% c(19,20)))
+
 # Gráfico de barras para analise das médias de depressão por idade
 
-
-Bloxplot_IdadeDep <- ggplot(df_q3, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades))) +
+Barplot_IdadeDep <- ggplot(df_q4, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades))) +
   stat_summary(fun = mean, geom = "bar") +  # Criar as barras com a média
   stat_summary(fun = mean, geom = "text", aes(label = round(..y.., 2)), 
                vjust = -0.5, size = 5, color = "black") +  # Adicionar valores acima das barras
@@ -337,6 +347,8 @@ Bloxplot_IdadeDep <- ggplot(df_q3, aes(x = as.factor(Idades), y = Mediadp, fill 
                      labels = c("Menos sintomas\nde depressão", "", "", "", "Mais sintomas\nde depressão")) +  
   theme_minimal() +
   theme(legend.position = "none")  # Remove a legenda
+
+Barplot_IdadeDep
 
 # Questão 5
 # Scatter plot com v76 e a depressão
