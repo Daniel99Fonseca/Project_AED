@@ -173,8 +173,6 @@ ftable_idade
 #Medidas descritivas
 
 ##############################################
-# Média das idades
-med_age <- mean(df$Idades)
 
 #Nº de inquiridos
 inq <- nrow(df)
@@ -267,9 +265,9 @@ ggplot(df, aes(y = Idades)) +
 # Questão 1
 
 ######################################
-# Histograma das Horas de Sono
-# Criar o histograma
-Histogram_H_Sono <- ggplot(na.omit(df), aes(x = factor (Horas.de.Sono))) +
+# Gráfico das Horas de Sono
+# Criar o gráfico
+Bar_H_Sono <- ggplot(na.omit(df), aes(x = factor (Horas.de.Sono))) +
   geom_bar(fill = 'skyblue', color = "black") +
   theme_minimal() +
   xlab("Horas de Sono") + 
@@ -278,7 +276,7 @@ Histogram_H_Sono <- ggplot(na.omit(df), aes(x = factor (Horas.de.Sono))) +
   ylim(0,200)
 
 # Exibir o gráfico
-Histogram_H_Sono
+Bar_H_Sono
 
 #########################################
 

@@ -60,7 +60,7 @@ O inquérito aos alunos era constituído pelas seguintes perguntas:
   Inicialmente, deparados com esta base de dados, a intuição foi analisar as horas de sono, dado que (em certa parte, estereotipicamente) os sintomas depressivos estão relacionados com as horas de sono. No caso prático em questão, devido ao panorama *Covid-19*, ao estarem confinados em casa, seria de esperar que os alunos dormissem mais horas que o habitual, devido à transição para uma rotina mais monótona e com menos atividade física presente nas suas vidas.
 ```{r echo=FALSE}
 
-Histogram_H_Sono
+Bar_H_Sono
 
 ```
    
