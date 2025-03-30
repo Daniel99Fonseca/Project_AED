@@ -315,14 +315,13 @@ df_q3 <- df%>%filter(!(Horas.de.Sono %in% c(NA)))
 
 # Criação do gráfico de dispersão de Horas de Sono e Depressão
 
-Barplot_SleepDep <- ggplot(df_q3, aes(x=as.factor(Horas.de.Sono),y=Mediadp)) +
-  geom_col(stat = "identity", fill = "skyblue") +
-  labs(title="Relação entre Horas de Sono e Depressão",
-       x="Horas de Sono",
-       y="Média de Níveis de Depressão") +
+sono_e_dep <- ggplot(na.omit(df_q3), aes(x=Horas.de.Sono,y=Mediadp)) +
+  geom_point() +
+  labs(title="Relação entre Horas de Sono e Depressão",x="Horas de Sono",y="Média de Níveis de Depressão") +
   theme_minimal()
 
-Barplot_SleepDep
+sono_e_dep
+
 
 #################################
 
@@ -343,8 +342,9 @@ Barplot_IdadeDep <- ggplot(df_q4, aes(x = as.factor(Idades), y = Mediadp, fill =
   labs(title = "Relação entre Idade e Depressão",
        x = "Idade",
        y = "Média de Níveis de Depressão") +
-  scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1),  
-                     labels = c("Menos sintomas\nde depressão", "", "", "", "Mais sintomas\nde depressão")) +  
+  scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1, 1.2),  
+                     labels = c("Menos sintomas\nde depressão", "", "", "", "", "Mais sintomas\nde depressão")) +  
+  expand_limits(y=1.2) +
   theme_minimal() +
   theme(legend.position = "none")  # Remove a legenda
 
