@@ -270,7 +270,7 @@ Histogram_H_Sono <- ggplot(na.omit(df), aes(x = factor (Horas.de.Sono))) +
   theme_minimal() +
   xlab("Horas de Sono") + 
   ylab("Frequência") +
-  geom_text(stat = "count", aes(label = ..count..), vjust = -0.5, size = 5, color = "black") + # Adiciona os valores
+  geom_text(stat = "count", aes(label = after_stat(count)), vjust = -0.5, size = 5, color = "black") + # Adiciona os valores
   ylim(0,200)
 
 # Exibir o gráfico
