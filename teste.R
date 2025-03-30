@@ -295,7 +295,7 @@ df_q2 <- df %>% filter(Genero %in% c("Masculino", "Feminino"))
 
 gen_v_dep <-ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
   stat_summary(fun = mean, geom = "bar") +  # Criar as barras com a média
-  stat_summary(fun = mean, geom = "text", aes(label = round(..y.., 2)), 
+  stat_summary(fun = mean, geom = "text", aes(label = round(after_stat(y), 2)), 
                vjust = -0.5, size = 5, color = "black") +  # Adicionar os valores acima das barras
   labs(title = "Relação entre Género e Depressão",
        x = "Género",
@@ -303,6 +303,8 @@ gen_v_dep <-ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
   scale_fill_manual(values = c("blue", "pink")) +
   expand_limits(y=1)
   theme_minimal()
+  
+gen_v_dep
 
 # Remover Idades 19 e 20 por haver apenas 1 de cada, resultando numa média "biased" em relação a estas idades
 df_q3 <- df
