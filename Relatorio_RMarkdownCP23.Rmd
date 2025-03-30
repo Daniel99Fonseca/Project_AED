@@ -86,6 +86,20 @@ Por conseguinte, também devido à hipótese apresentada anteriormente de os alu
 
 # Relação entre género e sintomas depressivos
 
+<<<<<<< HEAD
+# 4. Será que existe alguma faixa etária com maiores níveis de depressão?
+
+ Com o objetivo de analisar se os sintomas depressivos estão relacionados com a idade, pós pandemia, seria esperado que inquiridos mais velhos apresentassem maiores níveis de depressão.
+ Após cruzar as variáveis, Idades e Média de Níveis de Depressão, obtemos o seguinte gráfico:
+ 
+```{r echo=FALSE}
+Barplot_IdadeDep
+```
+
+   **Figura 4:** Relação entre idades e depressão
+ 
+ Desta forma podemos observar que, pós pandemia, como esperado, os inquiridos mais velhos possuem maiores níveis de depressão, mas podemos observar que a faixa etária de 17 anos apresentou resultados fora do que seria esperado, mostrando menores níveis de depressão de todas as outras faixas etárias exceto a faixa etária de 11 anos.
+=======
 Analisou-se a média das respostas às diversas questões relacionadas com sentimentos depressivos.  
 De seguida, esta média era correlacionada com diferentes variáveis, de forma a encontrar possíveis correlações.  
 Por conseguinte, gerou-se o seguinte gráfico:
@@ -108,16 +122,4 @@ No entanto, tendo em conta o contexto do caso prático, em que alunos foram ques
 Para analisar a relação entre as horas de sono e os sintomas de depressão, foi utilizado um gráfico de dispersão. No entanto, ao contrário do que era esperado, não foi possível visualizar uma relação clara entre as horas de sono e os sintomas de depressão.  
 
 Desta forma, podemos então concluir que por um aluno dormir mais (ou menos) não necessariamente implica que este vá desenvolver sintomas depressivos nem um aluno que tem sintomas depressivos dorme mais (ou menos) horas.
-
-4. Será que existe alguma faixa etária com maiores níveis de depressão?
-
- Com o objetivo de analisar se os sintomas depressivos estão relacionados com a idade, pós pandemia, seria esperado que inquiridos mais velhos apresentassem maiores níveis de depressão.
- Após cruzar as variáveis, Idades e Média de Níveis de Depressão, obtemos o seguinte gráfico:
- 
-```{r echo=FALSE}
-Barplot_IdadeDep
-```
-
-   **Figura 4:** Relação entre idades e depressão
- 
- Desta forma podemos observar que, pós pandemia, como esperado, os inquiridos mais velhos possuem maiores níveis de depressão, mas podemos observar que a faixa etária de 17 anos apresentou resultados fora do que seria esperado, mostrando menores níveis de depressão de todas as outras faixas etárias exceto a faixa etária de 11 anos.
+>>>>>>> c15b6202ac39eaa5f1468ebe4f6c3016f3729e27
