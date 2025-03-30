@@ -83,6 +83,23 @@ Este resultado sugere que, em média, os alunos dormem um número de horas adequ
 
 # Relação entre género e sintomas depressivos
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+# 4. Será que existe alguma faixa etária com maiores níveis de depressão?
+
+ Com o objetivo de analisar se os sintomas depressivos estão relacionados com a idade, pós pandemia, seria esperado que inquiridos mais velhos apresentassem maiores níveis de depressão, uma vez que falamos de crianças de 11 anos até à maioridade, como estão a crescer, começam a lidar com responsabilidade e vivenciar situações mais stressantes.
+ Após cruzar as variáveis, Idades e Média de Níveis de Depressão, obtemos o seguinte gráfico:
+ 
+```{r echo=FALSE}
+Barplot_IdadeDep
+```
+
+   **Figura 4:** Relação entre idades e depressão
+ 
+ Desta forma podemos observar que, pós pandemia, como esperado, os inquiridos mais velhos possuem maiores níveis de depressão, mas podemos observar que a faixa etária de 17 anos apresentou resultados fora do que seria esperado, mostrando menores níveis de depressão de todas as outras faixas etárias exceto a faixa etária de 11 anos.
+=======
+=======
+>>>>>>> 5fbf1a66bc7042ff5986cd9c675d5a6f41ed6c0e
 Analisou-se a média das respostas às diversas questões relacionadas com sentimentos depressivos.  
 De seguida, esta média era correlacionada com diferentes variáveis, de forma a encontrar possíveis correlações.  
 O gráfico seguinte apresenta a média das respostas às questões sobre sintomas depressivos, segmentadas por género.
