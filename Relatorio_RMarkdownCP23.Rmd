@@ -81,29 +81,9 @@ Bar_H_Sono
 
 Este resultado sugere que, em média, os alunos dormem um número de horas adequado às recomendações para a sua faixa etária, o defende a ideia de que a rotina na pandemia pode ter levado a um aumento no número de horas de sono. No entanto, posteriormente iremos analisar se este parâmetro implica sintomas mais ou menos depressivos ou vice versa.
 
-# Relação entre género e sintomas depressivos
+# Relação entre género e sintomas depressivos  
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-# 4. Será que existe alguma faixa etária com maiores níveis de depressão?
-
- Com o objetivo de analisar se os sintomas depressivos estão relacionados com a idade, pós pandemia, seria esperado que inquiridos mais velhos apresentassem maiores níveis de depressão, uma vez que falamos de crianças de 11 anos até à maioridade, como estão a crescer, começam a lidar com responsabilidade e vivenciar situações mais stressantes.
- Após cruzar as variáveis, Idades e Média de Níveis de Depressão, obtemos o seguinte gráfico:
- 
-```{r echo=FALSE}
-Barplot_IdadeDep
-```
-
-   **Figura 4:** Relação entre idades e depressão
- 
- Desta forma podemos observar que, pós pandemia, como esperado, os inquiridos mais velhos possuem maiores níveis de depressão, mas podemos observar que a faixa etária de 17 anos apresentou resultados fora do que seria esperado, mostrando menores níveis de depressão de todas as outras faixas etárias exceto a faixa etária de 11 anos.
-=======
-=======
->>>>>>> 5fbf1a66bc7042ff5986cd9c675d5a6f41ed6c0e
-Analisou-se a média das respostas às diversas questões relacionadas com sentimentos depressivos.  
-De seguida, esta média era correlacionada com diferentes variáveis, de forma a encontrar possíveis correlações.  
 O gráfico seguinte apresenta a média das respostas às questões sobre sintomas depressivos, segmentadas por género.
-
 ```{r echo=FALSE}
 
 gen_v_dep
@@ -115,6 +95,7 @@ gen_v_dep
 É possível observar que o género feminino apresenta mais sintomas depressivos, com uma média de **0.93** por resposta, numa escala de 0 a 3, enquanto o género masculino apresenta uma média por resposta de **0.46**. 
 Apesar de não ser um valor elevado em termos absolutos, a diferença relativa sugere que o género feminino é mais propenso a sentir sintomas depressivos, após episódios como *Covid-19*.
 
+
 # Horas de sono e depressão
 
 Para analisar a relação entre as horas de sono e os sintomas de depressão, foi utilizado um gráfico de dispersão.  
@@ -122,15 +103,19 @@ No entanto, ao contrário do que era esperado, não foi possível visualizar uma
 
 Desta forma, podemos então concluir que por um aluno dormir mais (ou menos) não necessariamente implica que este vá desenvolver sintomas depressivos nem um aluno que tem sintomas depressivos dorme mais (ou menos) horas.
 
-# Será que existe alguma faixa etária com maiores níveis de depressão?
+# Será que existe alguma faixa etária com maiores níveis de depressão?  
 
- Com o objetivo de analisar se os sintomas depressivos estão relacionados com a idade, pós pandemia. A partir de uma certa faixa etária, aliado à puberdade vivenciada por todos os adolescentes, com níveis acrescidos de responsabilidades, assim como possível pressão em entrar no mundo universitário e terminar um ciclo escolar, seria expetável que inquiridos mais velhos apresentassem maiores níveis de depressão. 
- O gráfico seguinte ilustra a média dos níveis de depressão por faixa etária.
- 
+Com o objetivo de analisar se os sintomas depressivos estão relacionados com a idade, pós pandemia. A partir de uma certa faixa etária, aliado à puberdade vivenciada por todos os adolescentes, com níveis acrescidos de responsabilidades, assim como possível pressão em entrar no mundo universitário e terminar um ciclo escolar, seria expetável que inquiridos mais velhos apresentassem maiores níveis de depressão. 
+  O gráfico seguinte ilustra a média dos níveis de depressão por faixa etária.
+  
 ```{r echo=FALSE}
-Barplot_IdadeDep
+ Barplot_IdadeDep
 ```
-
-   **Figura 4:** Relação entre idades e depressão
  
- Desta forma podemos observar que, pós pandemia, como esperado, os inquiridos mais velhos possuem maiores níveis de depressão, apesar da faixa etária de 17 anos apresentou resultados fora do que seria esperado, mostrando menores níveis de depressão.
+**Figura 4:** Relação entre idades e depressão
+
+Desta forma podemos observar que, pós pandemia, como esperado, os inquiridos mais velhos possuem maiores níveis de depressão, apesar da faixa etária de 17 anos apresentou resultados fora do que seria esperado, mostrando menores níveis de depressão.
+
+# Conclusão
+
+Este estudo exploratório forneceu uma visão detalhada sobre a saúde psicológica de alguns alunos da região Norte de Portugal, com foco nas variáveis de horas de sono, gênero, idade e sintomas depressivos. Embora alguns resultados tenham sido consistentes com as expectativas, como a tendência de aumento da depressão com a idade, também podemos concluir que há maior prevalência de sintomas depressivos entre as raparigas, outras análises, como a relação entre horas de sono e depressão, não apresentaram resultados conclusivos. Estes achados destacam a complexidade da saúde mental juvenil e que a pandemia da Covid-19 afetou as crianças e adolescentes de muitas formas diferentes.
