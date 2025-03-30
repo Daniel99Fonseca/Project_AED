@@ -104,4 +104,6 @@ Consideramos que o número apresentado pelo género feminino não é considerado
 No entanto, tendo em conta o contexto do caso prático, em que alunos foram questionados após episódios de confinamento, podemos concluir que o género feminino tem mais tendência a desenvolver sentimentos depressivos após vivenciar um panorama como a *Covid-19*.  
 
 # Horas de sono e depressao
-Para analisar a relação entre as horas de sono e os sintomas de depressão, foi utilizado um gráfico de dispersão, onde é possível observar a relação entre as variáveis. No entanto, ao contrário do que era esperado, não foi possível visualizar uma relação clara entre as horas de sono e os sintomas de depressão.
+Para analisar a relação entre as horas de sono e os sintomas de depressão, foi utilizado um gráfico de dispersão. No entanto, ao contrário do que era esperado, não foi possível visualizar uma relação clara entre as horas de sono e os sintomas de depressão.  
+
+Desta forma, podemos então concluir que por um aluno dormir mais (ou menos) não necessariamente implica que este vá desenvolver sintomas depressivos nem um aluno que tem sintomas depressivos dorme mais (ou menos) horas.
