@@ -111,7 +111,7 @@ A partir de uma certa faixa etária, aliado à puberdade vivenciada por todos os
   O gráfico seguinte ilustra a média dos níveis de depressão por faixa etária.
   
 ```{r echo=FALSE}
- Barplot_IdadeDep
+dp_v_idade
 ```
  
 **Figura 4:** Relação entre idades e depressão

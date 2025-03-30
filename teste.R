@@ -334,10 +334,6 @@ df_q4 <- df
 df_q4 <- df%>% filter(!(Idades %in% c(19,20)))
 
 # Gráfico de barras para analise das médias de depressão por idade
-
-Barplot_IdadeDep <- ggplot(df_q4, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades)))
-
-# Gráfico de barras para analise das médias de depressão por idade
 dp_v_idade <- ggplot(df_q3, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades))) +
   stat_summary(fun = mean, geom = "bar") +  # Criar as barras com a média
   stat_summary(fun = mean, geom = "text", aes(label = round(after_stat(y), 2)), 
