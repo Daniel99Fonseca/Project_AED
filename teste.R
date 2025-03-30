@@ -255,8 +255,8 @@ df_media <- data.frame(Grupo = "Média das Idades", Idades = media_idade)
 bplot_age <- ggplot(df, aes(y = Idades)) +
   geom_boxplot(fill = "lightblue", color = "black") +  # Boxplot das idades
   geom_hline(yintercept = media_idade, color = "red", linetype = "dashed", size = 1) +  # Linha da média
-  geom_text(aes(x = 1, y = media_idade, label = round(media_idade, 2)), 
-            color = "red", vjust = -1.5, size = 5) +  # Texto da média
+  annotate("text", x = 1, y = media_idade, label = round(media_idade, 2), 
+           color = "red", vjust = -1.5, size = 5) +  # Texto da média
   labs(title = "Boxplot das Idades com Média", y = "Idades") +
   theme_minimal()
 
