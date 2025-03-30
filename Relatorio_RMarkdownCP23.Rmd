@@ -35,11 +35,22 @@ O presente relatório é baseado numa análise exploratória de dados, tendo com
 
 Para que tal seja possível, de forma grupal, decidimos focar em alguns tópicos, em forma de questões à base de dados, de forma a analisar possíveis correlações, nomeadamente: 
 
-  **1.** Primeiramente, de forma a entender e conhecer a nossa amostra, pretendemos analisar a distribuição das horas de sono da nossa amostra.  
-  **2.** O género influencia as respostas relacionadas com a saúde psicológica e bem-estar? Existem diferenças significativas nos sintomas de depressão entre rapazes e raparigas?
-  **3.** Existe uma correlação entre as horas de sono dos alunos e os sintomas de depressão?
-  **4.** Há alguma faixa etária com sintomas depressivos mais predominante?
-  **5.** Por fim, é possível observar uma relação entre uma das questões propostas "Eu preocupo-me com muitas coisas" e sintomas depressivos?
+  **1.** Primeiramente, de forma a entender e conhecer a nossa amostra, 
+  pretendemos analisar a distribuição das horas de sono da nossa amostra.  
+  
+  **2.** O género influencia as respostas relacionadas com a saúde 
+  psicológica e bem-estar? Existem diferenças significativas nos sintomas 
+  de 
+  depressão entre rapazes e raparigas?
+  
+  **3.** Existe uma correlação entre as horas de sono dos alunos e os ~
+  sintomas de depressão?
+  
+  **4.** Há alguma faixa etária com sintomas depressivos mais 
+  predominante?
+  
+  **5.** Por fim, é possível observar uma relação entre uma das questões 
+  propostas "Eu preocupo-me com muitas coisas" e sintomas depressivos?
 
 # A amostra
 
