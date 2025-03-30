@@ -1,0 +1,61 @@
+---
+title: "Relatório Caso Prático 23"
+author: "Grupo 23"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(openxlsx)
+df <- read.xlsx("AED_CP23_Saúde_Copia.xlsx")
+knitr::opts_chunk$set(echo=FALSE)
+getwd()
+```
+
+![](iscte.png)
+
+<!-- Descobrir como colocar aqui uma tabela de indice -->
+
+# Introdução
+
+A saúde psicológica e o bem-estar das crianças e adolescentes são fatores determinantes para o seu desenvolvimento pessoal e sucesso escolar. O impacto da pandemia da Covid-19 acarretou desafios significativos para o mundo, no entanto este grupo etário - caraterizado por estarem em processo de evolução foi um dos mais afetados, exigindo uma análise aprofundada sobre as suas condições emocionais e sociais. Neste contexto, o estudo Saúde Psicológica e Bem-estar, promovido pelo Ministério da Educação em 2022, visa compreender o panorama da saúde mental dos estudantes portugueses, desde o pré-escolar até ao 12.º ano, considerando diferentes regiões do país.
+
+O presente relatório é baseado numa análise exploratória de dados, tendo como objetivo examinar uma amostra das respostas ao questionário aplicado, procurando identificar padrões e tendências relevantes. Foram analisadas respostas dos alunos a vários sintomas depressivos, a idade, o ciclo escolar e as horas de sono. Através da aplicação de algumas técnicas estatísticas e visualização de dados, pretende-se obter uma visão mais clara sobre o estado emocional dos alunos e analisar possíveis correlações entre as variáveis em estudo.
+
+Para que tal seja possível, de forma grupal, decidimos focar em alguns tópicos, em forma de questões +a base de dados, de forma a analisar possíveis correlações, nomeadamente:   
+  1. Primeiramente, de forma a entender e conhecer a nossa amostra, pretendemos analisar a distribuição das horas de sono da nossa amostra. 
+  2.O género influencia as respostas relacionadas com a saúde psicológica e bem-estar? Existem diferenças significativas nos sintomas de depressão entre rapazes e raparigas? 
+  3. Existe uma correlação entre as horas de sono dos alunos e os sintomas de depressão? 
+  4. Há alguma faixa etária com sintomas depressivos mais predominante? 
+  5. Por fim, é possível observar uma relação entre uma das questões propostas "Eu preocupo-me com muitas coisas" e sintomas depressivos?
+
+# A amostra
+
+A amostra de dados é constituída por `r ncol(df)`, da região **Norte** do país. Apresenta uma distribuição de género bastante proporcional, sendo `r masc_p` masculino e `r fem_p` feminino. O remanescente identifica-se como outro (`r outro_p`) e `r nao_resp_p` não responderam.
+
+```{r echo=FALSE, fig.cap="Distribuição dos géneros"}
+ftable_gen
+```
+
+Os alunos questionados encontram-se no 3º e 4º ciclo, com idades entre os `r um_n` e `r  dez_n`. Em média, o aluno questionado tem `r mean(df$Idades)`
+
+O inquérito aos alunos era constituído pelas seguintes perguntas:   
+  1. Não consegui sentir nenhum sentimento positivo.
+  2. Tive muita dificuldade em ter iniciativa para fazer coisas.
+  3. Senti que não tinha nada a esperar do futuro.
+  4. Senti-me triste e deprimido.
+  5. Não fui capaz de ter entusiasmo para nada
+  6. Senti que não tinha muito valor como pessoa.
+  7. Senti que não vale a pena viver
+  7. Eu preocupo-me com muitas coisas.
+  
+  Os alunos, nestas questões respondiam numa escala, de acordo com o quanto (ou nada) se identificavam com o sentimento. 
+  Por fim, eram questionados sobre quantas horas, em média, dormem por noite.
+  
+  Inicialmente, deparados com esta base de dados, a intuição foi analisar as horas de sono, dado que (em certa parte, estereotipicamente) os sintomas depressivos estão relacionados com as horas de sono. No caso prático em questão, devido ao panorama *Covid-19*, ao estarem confinados em casa, seria de esperar que os alunos dormissem mais horas que o habitual, devido à transição para uma rotina mais monótona e com menos atividade física presente nas suas vidas.
+```{r echo=FALSE, fig.cap="Horas de sono dos alunos"}}
+
+ftable_gen
+
+```
+
