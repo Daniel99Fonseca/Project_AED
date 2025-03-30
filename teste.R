@@ -47,8 +47,6 @@ summary(df)
 df[df == 99] <- NA
 
 #Substituição dos valores missing pela mediana da respetiva coluna.
-# Dizer que podíamos usar a função lapply, mas foi sem sucesso. Seria uma forma
-# mais eficiente de fazer este passo.
 df$v39[is.na(df$v39)] <- median(df$v39, na.rm = TRUE)
 df$v41[is.na(df$v41)] <- median(df$v41, na.rm = TRUE)
 df$v46[is.na(df$v46)] <- median(df$v46, na.rm = TRUE)
@@ -175,6 +173,11 @@ ftable_idade
 #Medidas descritivas
 
 ##############################################
+# Média das idades
+mean(df$Idades)
+
+#Nº de inquiridos
+nrow(df)
 
 # Medidas descritivas de uma variável quantitativa: Horas de sono
 class(df$Horas.de.Sono)
@@ -237,7 +240,7 @@ summary(df$Horas.de.Sono)
 
 ############################################
 
-#boxplot med idade
+#boxplot idade
 
 #############################################
 #calculo da medida da tabela Idades
@@ -262,12 +265,13 @@ ggplot(df, aes(y = Idades)) +
 ######################################
 # Histograma das Horas de Sono
 # Criar o histograma
-Histogram_H_Sono <- ggplot(data = df, aes(x = Horas.de.Sono)) +
+Histogram_H_Sono <- ggplot(na.omit(df), aes(x = factor (Horas.de.Sono))) +
   geom_bar(fill = 'skyblue', color = "black") +
   theme_minimal() +
   xlab("Horas de Sono") + 
   ylab("Frequência") +
-  geom_text(stat = "count", aes(label = ..count..), vjust = -0.5, size = 5, color = "black")  # Adiciona os valores
+  geom_text(stat = "count", aes(label = ..count..), vjust = -0.5, size = 5, color = "black") + # Adiciona os valores
+  ylim(0,200)
 
 # Exibir o gráfico
 Histogram_H_Sono
