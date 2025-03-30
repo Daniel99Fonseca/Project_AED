@@ -42,7 +42,7 @@ ftable_gen
 Figura 1: Distribuição dos géneros entre os alunos questionados.
 
 
-Os alunos questionados encontram-se no 3º e 4º ciclo, com idades entre os `r min_age` e `r  max_age`. Em média, o aluno questionado tem `r med_age` anos.
+Os alunos questionados encontram-se no 3º e 4º ciclo, com idades entre os `r min_age` e `r  max_age`. Em média, o aluno questionado tem `r media_idade` anos.
 
 O inquérito aos alunos era constituído pelas seguintes perguntas:    
   **1.** Não consegui sentir nenhum sentimento positivo.  
