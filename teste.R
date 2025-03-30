@@ -282,7 +282,7 @@ Bar_H_Sono
 
 # Questão 2
 
-###########################################
+#########################################
 
 # Gráfico de Barras - Género vs Depressão
 # Criação da coluna Média de respostas de depressão
@@ -307,7 +307,12 @@ ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
 df_q3 <- df
 df_q3 <- df%>% filter(!(Idades %in% c(19,20)))
 
-#questão 3 
+#########################################
+
+# Questão 3 
+
+#########################################
+
 # Criação do gráfico de dispersão de Horas de Sono e Depressão
 
 ggplot(df_q3, aes(x=Horas.de.Sono,y=Mediadp)) +
@@ -315,12 +320,11 @@ ggplot(df_q3, aes(x=Horas.de.Sono,y=Mediadp)) +
   labs(title="Relação entre Horas de Sono e Depressão",x="Horas de Sono",y="Média de Níveis de Depressão") +
   theme_minimal()
 
-
 #################################
 
 # Questão 4
 
-################################3
+################################
 
 # Gráfico de barras para analise das médias de depressão por idade
 
@@ -337,7 +341,11 @@ ggplot(df_q3, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades)))
   theme_minimal() +
   theme(legend.position = "none")  # Remove a legenda
 
+#########################################
+
 # Questão 5
+
+#########################################
 # Scatter plot com v76 e a depressão
 
 plot(df$v76,df$Mediadp)
