@@ -12,7 +12,7 @@ output:
   html_document:
     toc: true
     toc_depth: 6
-    number_sections: true
+    number_sections: false
   pdf_document: default
 ---
 
@@ -84,8 +84,22 @@ Por conseguinte, também devido à hipótese apresentada anteriormente de os alu
 
 # Relação entre género e sintomas depressivos
 
-Analisou-se a média das respostas às diversas questões relacionadas com sentimentos depressivos. 
-De seguida, esta média era correlacionada com diferentes variáveis, de forma a encontrar possíveis correlações.
+Analisou-se a média das respostas às diversas questões relacionadas com sentimentos depressivos.  
+De seguida, esta média era correlacionada com diferentes variáveis, de forma a encontrar possíveis correlações.  
+Por conseguinte, gerou-se o seguinte gráfico:
+
+```{r echo=FALSE}
+
+gen_v_dep
+
+```
+**Figura 3:** Relação entre média de respostas a sintomas depressivos e género
+
+É possível observar que o género feminino apresenta mais sintomas depressivos, com uma média de respostas de 0.93, numa escala de 0 a 3, enquanto o género masculino apresenta uma média de respostas de 0.46. 
+
+Consideramos que o número apresentado pelo género feminino não é considerado um número elevado dada a escala em questão.  
+
+No entanto, tendo em conta o contexto do caso prático, em que alunos foram questionados após episódios de confinamento, podemos concluir que o género feminino tem mais tendência a desenvolver sentimentos depressivos após vivenciar um panorama como a *Covid-19*.  
 
 # Horas de sono e depressao
 Para analisar a relação entre as horas de sono e os sintomas de depressão, foi utilizado um gráfico de dispersão, onde é possível observar a relação entre as variáveis. No entanto, ao contrário do que era esperado, não foi possível visualizar uma relação clara entre as horas de sono e os sintomas de depressão.

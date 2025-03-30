@@ -293,7 +293,7 @@ df_q2 <- df %>% filter(Genero %in% c("Masculino", "Feminino"))
 
 # Criação do gráfico de barras de Género e Depressão
 
-ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
+gen_v_dep <-ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
   stat_summary(fun = mean, geom = "bar") +  # Criar as barras com a média
   stat_summary(fun = mean, geom = "text", aes(label = round(..y.., 2)), 
                vjust = -0.5, size = 5, color = "black") +  # Adicionar os valores acima das barras
