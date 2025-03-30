@@ -133,5 +133,6 @@ Além disso, é possível que a preocupação excessiva esteja mais ligada ao st
 
 # Conclusão
 
-A análise dos dados coletados permitiu uma visão abrangente sobre os fatores que afetam a saúde psicológica dos alunos da região Norte de Portugal, com destaque para a relação entre género, idade e sintomas depressivos.
+A análise dos dados coletados permitiu uma visão abrangente sobre os fatores que afetam a saúde psicológica dos alunos da região Norte de Portugal, com destaque para a relação entre género, idade e sintomas depressivos.  
+
 Embora alguns resultados tenham sido consistentes com as expectativas, a maior prevalência de sintomas depressivos entre as raparigas e a tendência crescente de depressão com a idade são questões que merecem maior atenção nas estratégias de apoio psicológico. Outras análises, como a relação entre horas de sono e depressão, não apresentaram resultados conclusivos. A pesquisa sublinha a necessidade de um acompanhamento mais personalizado para os alunos, de forma a atender às suas necessidades emocionais específicas, especialmente em tempos de crise, como foi o caso da pandemia.
