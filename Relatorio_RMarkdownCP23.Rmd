@@ -2,12 +2,15 @@
 title: "Relatório Caso Prático 23"
 author: "Grupo 23"
 date: "`r Sys.Date()`"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
 library(openxlsx)
-df <- read.xlsx("AED_CP23_Saúde_Copia.xlsx")
+source("C:/Users/Daniel/Desktop/Projeto_AED_Git/teste.R")
+df <- read.xlsx("AED_CP23_Saude_Copia.xlsx")
 knitr::opts_chunk$set(echo=FALSE)
 getwd()
 ```
@@ -48,7 +51,7 @@ O inquérito aos alunos era constituído pelas seguintes perguntas:
   5. Não fui capaz de ter entusiasmo para nada
   6. Senti que não tinha muito valor como pessoa.
   7. Senti que não vale a pena viver
-  7. Eu preocupo-me com muitas coisas.
+  8. Eu preocupo-me com muitas coisas.
   
   Os alunos, nestas questões respondiam numa escala, de acordo com o quanto (ou nada) se identificavam com o sentimento. 
   Por fim, eram questionados sobre quantas horas, em média, dormem por noite.

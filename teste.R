@@ -1,11 +1,11 @@
 # Bibliotecas
-install.packages("openxlsx")
-install.packages("tidyverse")
-install.packages("descr")
-install.packages("flextable")
-install.packages("moments")
-install.packages("DescTools")
-install.packages("ggplot2")
+# install.packages("openxlsx")
+# install.packages("tidyverse")
+# install.packages("descr")
+# install.packages("flextable")
+# install.packages("moments")
+# install.packages("DescTools")
+# install.packages("ggplot2")
 
 library(openxlsx)
 library(tidyverse)
@@ -16,7 +16,7 @@ library(DescTools)
 library(ggplot2)
 
 # Leitura do Excel
-df <- read.xlsx("AED_CP23_Saúde_Copia.xlsx")
+df <- read.xlsx("AED_CP23_Saude_Copia.xlsx")
 
 # Qual o tipo de classe: data.frame
 class(df)
