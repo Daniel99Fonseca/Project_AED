@@ -34,11 +34,11 @@ O presente relatório é baseado numa análise exploratória de dados, tendo com
 
 Para que tal seja possível, de forma grupal, decidimos segmentar o relatório em diversas pontos-chave, de forma a encontrar possíveis correlações, nomeadamente: 
 
-  **1.** **Distribuição das horas de sono** dos alunos, para entender os hábitos de descanso dos alunos e possíveis correlações com sintomas depressivos.
-  **2.** **Influência do género** nas respostas relacionadas com a saúde psicológica e bem-estar, com foco nas diferenças nos sintomas de depressão entre rapazes e raparigas. 
-  **3.** **Correlação entre as horas de sono e os sintomas de depressão**, de forma a investigar se existe uma correlação entre o descanso e os sintomas depressivos, dado que uma boa qualidade de sono é muitas vezes equiparada a uma melhor saúde mental.
-  **4.** **Faixa etária e sintomas depressivos**, com o intuito de identificar se existem grupos etários mais vulneráveis aos sintomas depressivos após a pandemia.
-  **5.** Por fim, será que é possível observar uma relação entre a preocupação excessiva ("Eu preocupo-me com muitas coisas") e sintomas depressivos?  
+  **1.** **Distribuição das horas de sono** dos alunos, para entender os hábitos de descanso dos alunos e possíveis correlações com sintomas depressivos.  
+  **2.** **Influência do género** nas respostas relacionadas com a saúde psicológica e bem-estar, com foco nas diferenças nos sintomas de depressão entre rapazes e raparigas.  
+  **3.** **Correlação entre as horas de sono e os sintomas de depressão**, de forma a investigar se existe uma correlação entre o descanso e os sintomas depressivos, dado que uma boa qualidade de sono é muitas vezes equiparada a uma melhor saúde mental.  
+  **4.** **Faixa etária e sintomas depressivos**, com o intuito de identificar se existem grupos etários mais vulneráveis aos sintomas depressivos após a pandemia.  
+  **5.** Por fim, será que é possível observar uma **relação** entre a **preocupação excessiva** ("Eu preocupo-me com muitas coisas") e **sintomas depressivos**?  
 
 # O inquérito e a amostra
 
@@ -60,6 +60,7 @@ A estrutura do inquérito incluía uma série de questões relacionadas com sint
 
 ```{r echo=FALSE, fig.cap="Distribuição dos géneros entre os alunos questionados."}
 ftable_gen
+bplot_age
 ```
 
    **Figura 1:** Distribuição dos géneros entre os alunos questionados.   
