@@ -28,17 +28,17 @@ getwd()
 
 # Introdução
 
-A saúde psicológica e o bem-estar das crianças e adolescentes são fatores determinantes para o seu desenvolvimento pessoal e sucesso escolar. O impacto da pandemia da Covid-19 acarretou desafios significativos para o mundo, no entanto este grupo etário - caraterizado por estarem em processo de evolução foi um dos mais afetados, exigindo uma análise aprofundada sobre as suas condições emocionais e sociais. Neste contexto, o estudo Saúde Psicológica e Bem-estar, promovido pelo Ministério da Educação em 2022, visa compreender o panorama da saúde mental dos estudantes portugueses, desde o pré-escolar até ao 12.º ano, considerando diferentes regiões do país.
+A saúde psicológica e o bem-estar das crianças e adolescentes são fatores determinantes para o seu desenvolvimento pessoal e sucesso escolar. O impacto da pandemia da *Covid-19* acarretou desafios significativos para o mundo, no entanto este grupo etário - caraterizado por estarem em processo de puberdade foi um dos mais afetados psicologicamente, exigindo uma análise aprofundada sobre as suas condições emocionais e sociais. Neste contexto, o estudo *Saúde Psicológica e Bem-estar*, promovido pelo Ministério da Educação em 2022, visa compreender o panorama da saúde mental dos estudantes portugueses, desde o pré-escolar até ao 12.º ano, considerando diferentes regiões do país.
 
 O presente relatório é baseado numa análise exploratória de dados, tendo como objetivo examinar uma amostra das respostas ao questionário aplicado, procurando identificar padrões e tendências relevantes. Foram analisadas respostas dos alunos a vários sintomas depressivos, a idade, o ciclo escolar e as horas de sono. Através da aplicação de algumas técnicas estatísticas e visualização de dados, pretende-se obter uma visão mais clara sobre o estado emocional dos alunos e analisar possíveis correlações entre as variáveis em estudo.
 
-Para que tal seja possível, de forma grupal, decidimos segmentar o relatório em diversas pontos-chave, de forma a encontrar possíveis correlações, nomeadamente: 
+Para que tal seja possível, de forma grupal, decidimos segmentar o relatório em diversos pontos-chave, de forma a encontrar possíveis correlações, nomeadamente: 
 
-  **1.** **Distribuição das horas de sono** dos alunos, para entender os hábitos de descanso dos alunos e possíveis correlações com sintomas depressivos.  
-  **2.** **Influência do género** nas respostas relacionadas com a saúde psicológica e bem-estar, com foco nas diferenças nos sintomas de depressão entre rapazes e raparigas.  
-  **3.** **Correlação entre as horas de sono e os sintomas de depressão**, de forma a investigar se existe uma correlação entre o descanso e os sintomas depressivos, dado que uma boa qualidade de sono é muitas vezes equiparada a uma melhor saúde mental.  
+  **1.** A análise inicial foca-se no **número de horas de sono** dos alunos, dado que a qualidade e a quantidade de sono têm um impacto direto no bem-estar emocional e psicológico.
+  **2.** Avaliar a **influência do género** nas respostas relacionadas com a saúde psicológica e bem-estar, com foco nas diferenças nos sintomas de depressão entre rapazes e raparigas.  
+  **3.** Examinar se existe uma **correlação entre as horas de sono e os sintomas de depressão**.
   **4.** **Faixa etária e sintomas depressivos**, com o intuito de identificar se existem grupos etários mais vulneráveis aos sintomas depressivos após a pandemia.  
-  **5.** Por fim, será que é possível observar uma **relação** entre a **preocupação excessiva** ("Eu preocupo-me com muitas coisas") e **sintomas depressivos**?  
+  **5.** Por fim, será que é possível observar uma **relação** entre a **preocupação excessiva** ("Eu preocupo-me com muitas coisas") e **sintomas depressivos** para entender se uma tendência a preocupar-se mais está associada ao aumento de sintomas depressivos.
 
 # O inquérito e a amostra
 
@@ -53,10 +53,10 @@ A estrutura do inquérito incluía uma série de questões relacionadas com sint
 **7.** Senti que não vale a pena viver.  
 **8.** Eu preocupo-me com muitas coisas.  
   
-  As respostas dos alunos foram recolhidas numa escala de **0** a **3**, onde 0 significava "Não se aplicou a mim" e 3 "Aplicou-se a mim na maior parte do tempo". Além das questões sobre saúde emocional, os alunos foram questionados também sobre o número médio de horas de sono por noite.
+  As respostas dos alunos foram recolhidas numa escala de **0** a **3**, onde 0 significava "Não se aplicou a mim" e 3 "Aplicou-se a mim na maior parte do tempo". Além das questões sobre saúde emocional, foi pedido aos alunos que partilhassem também, em geral, quantas horas dormem por noite.
   
-  A amostra deste estudo é composta por **`r nrow(df)`** alunos, da região **Norte** de Portugal. Apresenta uma distribuição de género bastante proporcional, sendo **`r masc_p`%** masculino e **`r fem_p`%** feminino. O restante da amostra, identifica-se como outro **`r outro_p`%** e **`r nao_resp_p`%** não respondeu a esta questão.
-  Os alunos questionados encontram-se no 3º e 4º ciclo do ensino básico, com idades entre os **`r min_age`** e **`r  max_age`**. Em média, a idade do aluno questionado é **`r media_idade`** anos.
+  A amostra deste estudo é composta por **`r nrow(df)`** alunos, da região **Norte** de Portugal. Apresenta uma distribuição de género bastante proporcional, sendo **`r masc_p`%** masculino e **`r fem_p`%** feminino. O restante da amostra, identifica-se como "outro" **`r outro_p`%** e **`r nao_resp_p`%** não partilhou este dado.
+  Os alunos questionados encontram-se no 3º e 4º ciclo do ensino básico, compreendidos numa faixa etária entre os **`r min_age`** e **`r  max_age`** anos. Em média, a idade dos participantes era **`r media_idade`** anos.
 
 ```{r echo=FALSE}
 ftable_gen
