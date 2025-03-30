@@ -247,8 +247,8 @@ summary(df$Horas.de.Sono)
 #boxplot idade
 
 #############################################
-#calculo da medida da tabela Idades
-media_idade <- round(mean(df$Idades, na.rm = TRUE))
+#calculo da media Idades
+media_idade <- round(mean(df$Idades, na.rm = TRUE), digits = 1)
 
 #criar o data frame para a med idade 
 df_media <- data.frame(Grupo = "Média das Idades", Idades = media_idade)
