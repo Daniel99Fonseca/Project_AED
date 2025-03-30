@@ -174,10 +174,10 @@ ftable_idade
 
 ##############################################
 # Média das idades
-mean(df$Idades)
+med_age <- mean(df$Idades)
 
 #Nº de inquiridos
-nrow(df)
+inq <- nrow(df)
 
 # Min e max de idade
 min_age <- min(df$Idades, na.rm=TRUE)
