@@ -282,7 +282,7 @@ Bar_H_Sono
 
 # Questão 2
 
-###########################################
+#########################################
 
 # Gráfico de Barras - Género vs Depressão
 # Criação da coluna Média de respostas de depressão
@@ -301,13 +301,19 @@ ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
        x = "Género",
        y = "Média de Níveis de Depressão") +
   scale_fill_manual(values = c("blue", "pink")) +
+  expand_limits(y=1)
   theme_minimal()
 
 # Remover Idades 19 e 20 por haver apenas 1 de cada, resultando numa média "biased" em relação a estas idades
 df_q3 <- df
 df_q3 <- df%>% filter(!(Idades %in% c(19,20)))
 
-#questão 3 
+#########################################
+
+# Questão 3 
+
+#########################################
+
 # Criação do gráfico de dispersão de Horas de Sono e Depressão
 
 sono_e_dep <- ggplot(na.omit(df_q3), aes(x=Horas.de.Sono,y=Mediadp)) +
@@ -317,12 +323,11 @@ sono_e_dep <- ggplot(na.omit(df_q3), aes(x=Horas.de.Sono,y=Mediadp)) +
 
 sono_e_dep
 
-
 #################################
 
 # Questão 4
 
-################################3
+################################
 
 # Gráfico de barras para analise das médias de depressão por idade
 
@@ -339,7 +344,11 @@ ggplot(df_q3, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades)))
   theme_minimal() +
   theme(legend.position = "none")  # Remove a legenda
 
+#########################################
+
 # Questão 5
+
+#########################################
 # Scatter plot com v76 e a depressão
 
 plot(df$v76,df$Mediadp)
