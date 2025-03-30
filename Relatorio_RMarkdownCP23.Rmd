@@ -23,6 +23,7 @@ df <- read.xlsx("AED_CP23_Saude_Copia.xlsx")
 knitr::opts_chunk$set(echo=FALSE)
 getwd()
 ```
+
 ![](iscte.PNG)
 
 # Introdução
