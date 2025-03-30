@@ -332,7 +332,7 @@ sono_e_dep
 ################################
 
 # Gráfico de barras para analise das médias de depressão por idade
-ggplot(df_q3, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades))) +
+dp_v_idade <- ggplot(df_q3, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades))) +
   stat_summary(fun = mean, geom = "bar") +  # Criar as barras com a média
   stat_summary(fun = mean, geom = "text", aes(label = round(..y.., 2)), 
                vjust = -0.5, size = 5, color = "black") +  # Adicionar valores acima das barras
@@ -343,6 +343,8 @@ ggplot(df_q3, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades)))
                      labels = c("Menos sintomas\nde depressão", "", "", "", "Mais sintomas\nde depressão")) +  
   theme_minimal() +
   theme(legend.position = "none")  # Remove a legenda
+
+dp_v_idade
 
 #########################################
 
