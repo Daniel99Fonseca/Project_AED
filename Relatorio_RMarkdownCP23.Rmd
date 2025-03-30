@@ -87,4 +87,15 @@ Por conseguinte, também devido à hipótese apresentada anteriormente de os alu
 # Relação entre género e sintomas depressivos
 
 Analisou-se a média das respostas às diversas questões relacionadas com sentimentos depressivos. 
-De seguida, esta média era correlacionada com diferentes variáveis, de forma a encontrar possíveis correlações. 
+De seguida, esta média era correlacionada com diferentes variáveis, de forma a encontrar possíveis correlações.
+
+# 3. Horas de sono e depressao
+Para analisar a relação entre as horas de sono e os sintomas de depressão, foi utilizado um gráfico de dispersão, onde é possível observar a relação entre as variáveis. No entanto, ao contrário do que era esperado, não foi possível visualizar uma relação clara entre as horas de sono e os sintomas de depressão.
+
+```{r echo=FALSE}
+
+sono_e_dep
+
+```
+   
+   **Figura 4:** Gráfico de dispersão entre as horas de sono e os sintomas de depressão.
