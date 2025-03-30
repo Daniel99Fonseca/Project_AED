@@ -9,7 +9,7 @@ output:
 
 ```{r setup, include=FALSE}
 library(openxlsx)
-source("C:/Users/Daniel/Desktop/Projeto_AED_Git/teste.R")
+source("teste.R")
 df <- read.xlsx("AED_CP23_Saude_Copia.xlsx")
 knitr::opts_chunk$set(echo=FALSE)
 getwd()
