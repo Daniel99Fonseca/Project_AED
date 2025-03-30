@@ -286,14 +286,14 @@ Bar_H_Sono
 
 # Gráfico de Barras - Género vs Depressão
 # Criação da coluna Média de respostas de depressão
-df$Mediadp <- (df$v39 + df$v41 + df$v46 + df$v49 + df$v52 + df$v53 + df$v57)/7
+df$Mediadp <- (df$v39 + df$v41 + df$v46 + df$v49 + df$v52 + df$v53 + df$v57)
 
 # Aplicação de filtro para obter apenas Genero Masculino e Feminino
 df_q2 <- df %>% filter(Genero %in% c("Masculino", "Feminino"))
 
-# Criação do gráfico de barras de Género e Depressão
-gen_v_dep <-ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
 
+# Criação do gráfico de barras de Género e Depressão
+gen_v_dep <-ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero))+
   stat_summary(fun = mean, geom = "bar") +  # Criar as barras com a média
   stat_summary(fun = mean, geom = "text", aes(label = round(after_stat(y), 2)), 
                vjust = -0.5, size = 5, color = "black") +  # Adicionar os valores acima das barras
