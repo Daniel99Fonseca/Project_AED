@@ -34,32 +34,43 @@ Para que tal seja possível, de forma grupal, decidimos focar em alguns tópicos
 
 # A amostra
 
-A amostra de dados é constituída por `r nrow(df)` alunos, da região **Norte** do país. Apresenta uma distribuição de género bastante proporcional, sendo `r masc_p`% masculino e `r fem_p`% feminino. O remanescente identifica-se como outro (`r outro_p`%) e `r nao_resp_p`% não responderam.
+A amostra de dados é constituída por **`r nrow(df)`** alunos, da região **Norte** do país. Apresenta uma distribuição de género bastante proporcional, sendo **`r masc_p`%** masculino e **`r fem_p`%** feminino. O remanescente identifica-se como outro (**`r outro_p`%**) e **`r nao_resp_p`%** não responderam.
 
-```{r echo=FALSE, fig.cap="Distribuição dos géneros"}
-knitr::kable(ftable_gen, caption = " Figura 1: Distribuição dos géneros entre os alunos questionados.")
+```{r echo=FALSE, fig.cap="Distribuição dos géneros entre os alunos questionados."}
+ftable_gen
 ```
 
-Os alunos questionados encontram-se no 3º e 4º ciclo, com idades entre os `r min_age` e `r  max_age`. Em média, o aluno questionado tem `r med_age` anos.
+   **Figura 1:** Distribuição dos géneros entre os alunos questionados.   
+
+Os alunos questionados encontram-se no 3º e 4º ciclo, com idades entre os **`r min_age`** e **`r  max_age`**. Em média, o aluno questionado tem **`r media_idade`** anos.
 
 O inquérito aos alunos era constituído pelas seguintes perguntas:    
-  1. Não consegui sentir nenhum sentimento positivo.  
-  2. Tive muita dificuldade em ter iniciativa para fazer coisas.  
-  3. Senti que não tinha nada a esperar do futuro.  
-  4. Senti-me triste e deprimido.    
-  5. Não fui capaz de ter entusiasmo para nada.  
-  6. Senti que não tinha muito valor como pessoa.  
-  7. Senti que não vale a pena viver.  
-  8. Eu preocupo-me com muitas coisas.  
+  **1.** Não consegui sentir nenhum sentimento positivo.  
+  **2.** Tive muita dificuldade em ter iniciativa para fazer coisas.  
+  **3.** Senti que não tinha nada a esperar do futuro.  
+  **4.** Senti-me triste e deprimido.    
+  **5.** Não fui capaz de ter entusiasmo para nada.  
+  **6.** Senti que não tinha muito valor como pessoa.  
+  **7.** Senti que não vale a pena viver.  
+  **8.** Eu preocupo-me com muitas coisas.  
   
   Os alunos, nestas questões respondiam numa escala, de acordo com o quanto (ou nada) se identificavam com o sentimento.   
   Por fim, eram questionados sobre quantas horas, em média, dormem por noite.
   
-  Inicialmente, deparados com esta base de dados, a intuição foi analisar as horas de sono, dado que (em certa parte, estereotipicamente) os sintomas depressivos estão relacionados com as horas de sono. No caso prático em questão, devido ao panorama *Covid-19*, ao estarem confinados em casa, seria de esperar que os alunos dormissem mais horas que o habitual, devido à transição para uma rotina mais monótona e com menos atividade física presente nas suas vidas.
-```{r echo=FALSE, fig.cap=" Figura 2: Horas de sono dos alunos"}
+  
+# 1. Horas de sono dos alunos
 
-Histogram_H_Sono
+  Inicialmente, deparados com esta base de dados, a intuição foi analisar as horas de sono, dado que (em certa parte, estereotipicamente) os sintomas depressivos estão relacionados com as horas de sono. No caso prático em questão, devido ao panorama *Covid-19*, ao estarem confinados em casa, seria de esperar que os alunos dormissem mais horas que o habitual, devido à transição para uma rotina mais monótona e com menos atividade física presente nas suas vidas.
+```{r echo=FALSE}
+
+Bar_H_Sono
 
 ```
-
+   
+   **Figura 2:** Distribuição horas de sono dos alunos   
+   
 O presente gráfico apresenta uma distribuição normal, envieseada à esquerda.
+
+Desta forma, podemos inferir que, em média, os alunos tendem a dormir o número de horas recomendadas (8) dado que este é o número de horas dormidas com maior frequência entre os alunos.   
+Por conseguinte, também devido à hipótese apresentada anteriormente de os alunos, devido à pandemia estarem mais confinados em casa, podemos inferir que dormem bastante horas, sendo que a esmagadora maioria dorme acima de 7 horas por noite.  
+
