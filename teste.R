@@ -179,6 +179,10 @@ mean(df$Idades)
 #Nº de inquiridos
 nrow(df)
 
+# Min e max de idade
+min_age <- min(df$Idades, na.rm=TRUE)
+max_age <- max(df$Idades, na.rm=TRUE)
+
 # Medidas descritivas de uma variável quantitativa: Horas de sono
 class(df$Horas.de.Sono)
 mean(df$Horas.de.Sono)
