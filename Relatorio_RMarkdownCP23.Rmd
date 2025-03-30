@@ -38,7 +38,7 @@ Para que tal seja possível, de forma grupal, decidimos segmentar o relatório e
   **2.** Avaliar a **influência do género** nas respostas relacionadas com a saúde psicológica e bem-estar, com foco nas diferenças nos sintomas de depressão entre rapazes e raparigas.    
   **3.** Examinar se existe uma **correlação entre as horas de sono e os sintomas de depressão**.  
   **4.** **Faixa etária e sintomas depressivos**, com o intuito de identificar se existem grupos etários mais vulneráveis aos sintomas depressivos após a pandemia.  
-  **5.** Por fim, será que é possível observar uma **relação** entre a **preocupação excessiva** ("Eu preocupo-me com muitas coisas") e **sintomas depressivos** para entender se uma tendência a preocupar-se mais está associada ao aumento de sintomas depressivos.  
+  **5.** Por fim, será que é possível observar uma **relação** entre a **preocupação excessiva** ("Eu preocupo-me com muitas coisas") e **sintomas depressivos** para entender se há uma tendência a preocupar-se mais está associada ao aumento de sintomas depressivos.  
 
 # O inquérito e a amostra
 
