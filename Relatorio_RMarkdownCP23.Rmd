@@ -84,3 +84,24 @@ Desta forma, podemos inferir que, em média, os alunos tendem a dormir o número
 Por conseguinte, também devido à hipótese apresentada anteriormente de os alunos, devido à pandemia estarem mais confinados em casa, podemos inferir que dormem bastante horas, sendo que a esmagadora maioria dorme acima de **7** horas por noite.  
 
 # 2. 
+
+
+
+
+
+
+# 3. Horas de sono e depressao
+Para analisar a relação entre as horas de sono e os sintomas de depressão, foi utilizado um gráfico de dispersão, onde é possível observar a relação entre as variáveis. No entanto, ao contrário do que era esperado, não foi possível visualizar uma relação clara entre as horas de sono e os sintomas de depressão.
+
+```{r echo=FALSE}
+
+sono_e_dep
+
+```
+   
+   
+   **Figura 4:** Gráfico de dispersão entre as horas de sono e os sintomas de depressão.
+
+
+
+
