@@ -316,7 +316,7 @@ df_q3 <- df%>%filter(!(Horas.de.Sono %in% c(NA)))
 # Criação do gráfico de dispersão de Horas de Sono e Depressão
 
 Barplot_SleepDep <- ggplot(df_q3, aes(x=as.factor(Horas.de.Sono),y=Mediadp)) +
-  geom_col(stat = "identity", fill = "black") +
+  geom_col(stat = "identity", fill = "skyblue") +
   labs(title="Relação entre Horas de Sono e Depressão",
        x="Horas de Sono",
        y="Média de Níveis de Depressão") +
@@ -350,7 +350,12 @@ Barplot_IdadeDep <- ggplot(df_q4, aes(x = as.factor(Idades), y = Mediadp, fill =
 
 Barplot_IdadeDep
 
+#######################
+
 # Questão 5
+
+#######################
+
 # Scatter plot com v76 e a depressão
 
 plot(df$v76,df$Mediadp)
