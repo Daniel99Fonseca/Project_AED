@@ -252,7 +252,7 @@ media_idade <- round(mean(df$Idades, na.rm = TRUE), digits = 1)
 df_media <- data.frame(Grupo = "Média das Idades", Idades = media_idade)
 
 #criar o boxplot 
-ggplot(df, aes(y = Idades)) +
+bplot_age <- ggplot(df, aes(y = Idades)) +
   geom_boxplot(fill = "lightblue", color = "black") +  # Boxplot das idades
   geom_hline(yintercept = media_idade, color = "red", linetype = "dashed", size = 1) +  # Linha da média
   geom_text(aes(x = 1, y = media_idade, label = round(media_idade, 2)), 
@@ -260,6 +260,7 @@ ggplot(df, aes(y = Idades)) +
   labs(title = "Boxplot das Idades com Média", y = "Idades") +
   theme_minimal()
 
+bplot_age
 ######################################
 
 # Questão 1
@@ -286,7 +287,7 @@ Bar_H_Sono
 
 # Gráfico de Barras - Género vs Depressão
 # Criação da coluna Média de respostas de depressão
-df$Mediadp <- (df$v39 + df$v41 + df$v46 + df$v49 + df$v52 + df$v53 + df$v57)
+df$Mediadp <- ((df$v39 + df$v41 + df$v46 + df$v49 + df$v52 + df$v53 + df$v57)/7)
 
 # Aplicação de filtro para obter apenas Genero Masculino e Feminino
 df_q2 <- df %>% filter(Genero %in% c("Masculino", "Feminino"))
@@ -342,7 +343,8 @@ Barplot_IdadeDep <- ggplot(df_q4, aes(x = as.factor(Idades), y = Mediadp, fill =
 
 
 # Gráfico de barras para analise das médias de depressão por idade
-dp_v_idade <- ggplot(df_q3, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades))) +
+dp_v_idade <- ggplot(df_q4, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades))) +
+  
   stat_summary(fun = mean, geom = "bar") +  # Criar as barras com a média
   stat_summary(fun = mean, geom = "text", aes(label = round(after_stat(y), 2)), 
                vjust = -0.5, size = 5, color = "black") +  # Adicionar valores acima das barras
