@@ -39,7 +39,7 @@ A amostra de dados é constituída por `r nrow(df)` alunos, da região **Norte**
 ```{r echo=FALSE, fig.cap="Distribuição dos géneros entre os alunos questionados."}
 ftable_gen
 ```
-Figura 1: Distribuição dos géneros entre os alunos questionados.
+**Figura 1:** Distribuição dos géneros entre os alunos questionados.
 
 
 Os alunos questionados encontram-se no 3º e 4º ciclo, com idades entre os `r min_age` e `r  max_age`. Em média, o aluno questionado tem `r media_idade` anos.
@@ -58,10 +58,10 @@ O inquérito aos alunos era constituído pelas seguintes perguntas:
   Por fim, eram questionados sobre quantas horas, em média, dormem por noite.
   
   Inicialmente, deparados com esta base de dados, a intuição foi analisar as horas de sono, dado que (em certa parte, estereotipicamente) os sintomas depressivos estão relacionados com as horas de sono. No caso prático em questão, devido ao panorama *Covid-19*, ao estarem confinados em casa, seria de esperar que os alunos dormissem mais horas que o habitual, devido à transição para uma rotina mais monótona e com menos atividade física presente nas suas vidas.
-```{r echo=FALSE, fig.cap=" Figura 2: Horas de sono dos alunos"}
+```{r echo=FALSE}
 
 Histogram_H_Sono
 
 ```
-
+**Figura 2:** Distribuição horas de sono dos alunos
 O presente gráfico apresenta uma distribuição normal, envieseada à esquerda.
