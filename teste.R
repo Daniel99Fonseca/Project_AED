@@ -248,7 +248,7 @@ summary(df$Horas.de.Sono)
 
 #############################################
 #calculo da medida da tabela Idades
-media_idade <- mean(df$Idades, na.rm = TRUE)
+media_idade <- round(mean(df$Idades, na.rm = TRUE))
 
 #criar o data frame para a med idade 
 df_media <- data.frame(Grupo = "Média das Idades", Idades = media_idade)
