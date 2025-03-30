@@ -292,7 +292,6 @@ df$Mediadp <- (df$v39 + df$v41 + df$v46 + df$v49 + df$v52 + df$v53 + df$v57)/7
 df_q2 <- df %>% filter(Genero %in% c("Masculino", "Feminino"))
 
 # Criação do gráfico de barras de Género e Depressão
-Barplot_GenDep <- ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
 gen_v_dep <-ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
   stat_summary(fun = mean, geom = "bar") +  # Criar as barras com a média
   stat_summary(fun = mean, geom = "text", aes(label = round(after_stat(y), 2)), 
@@ -305,12 +304,6 @@ gen_v_dep <-ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
   theme_minimal()
   
 gen_v_dep
-
-#########################
-
-#Questão 3
-
-#########################
 
 #Remover NA
 df_q3 <- df
@@ -342,7 +335,7 @@ df_q4 <- df%>% filter(!(Idades %in% c(19,20)))
 
 # Gráfico de barras para analise das médias de depressão por idade
 
-Barplot_IdadeDep <- ggplot(df_q4, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades))) +
+Barplot_IdadeDep <- ggplot(df_q4, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades)))
 
 # Gráfico de barras para analise das médias de depressão por idade
 dp_v_idade <- ggplot(df_q3, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades))) +
@@ -357,14 +350,6 @@ dp_v_idade <- ggplot(df_q3, aes(x = as.factor(Idades), y = Mediadp, fill = as.fa
   expand_limits(y=1.2) +
   theme_minimal() +
   theme(legend.position = "none")  # Remove a legenda
-
-Barplot_IdadeDep
-
-#######################
-
-# Questão 5
-
-#######################
 
 dp_v_idade
 
