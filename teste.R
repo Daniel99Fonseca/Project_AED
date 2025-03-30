@@ -293,7 +293,11 @@ df_q2 <- df %>% filter(Genero %in% c("Masculino", "Feminino"))
 
 # Criação do gráfico de barras de Género e Depressão
 
+<<<<<<< HEAD
+Barplot_GenDep <- ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
+=======
 gen_v_dep <-ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
+>>>>>>> c15b6202ac39eaa5f1468ebe4f6c3016f3729e27
   stat_summary(fun = mean, geom = "bar") +  # Criar as barras com a média
   stat_summary(fun = mean, geom = "text", aes(label = round(after_stat(y), 2)), 
                vjust = -0.5, size = 5, color = "black") +  # Adicionar os valores acima das barras
@@ -306,16 +310,25 @@ gen_v_dep <-ggplot(df_q2, aes(x = Genero, y = Mediadp, fill = Genero)) +
   
 gen_v_dep
 
-# Remover Idades 19 e 20 por haver apenas 1 de cada, resultando numa média "biased" em relação a estas idades
-df_q3 <- df
-df_q3 <- df%>% filter(!(Idades %in% c(19,20)))
+#########################
 
+#Questão 3
+
+#########################
+
+#Remover NA
+df_q3 <- df
+df_q3 <- df%>%filter(!(Horas.de.Sono %in% c(NA)))
+
+<<<<<<< HEAD
+=======
 #########################################
 
 # Questão 3 
 
 #########################################
 
+>>>>>>> c15b6202ac39eaa5f1468ebe4f6c3016f3729e27
 # Criação do gráfico de dispersão de Horas de Sono e Depressão
 
 sono_e_dep <- ggplot(na.omit(df_q3), aes(x=Horas.de.Sono,y=Mediadp)) +
@@ -330,20 +343,42 @@ sono_e_dep
 # Questão 4
 
 ################################
+<<<<<<< HEAD
+
+# Remover Idades 19 e 20 por haver apenas 1 de cada, resultando numa média "biased" em relação a estas idades (existe apenas 1 inquirido de cada)
+df_q4 <- df
+df_q4 <- df%>% filter(!(Idades %in% c(19,20)))
+
+# Gráfico de barras para analise das médias de depressão por idade
+
+Barplot_IdadeDep <- ggplot(df_q4, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades))) +
+=======
 
 # Gráfico de barras para analise das médias de depressão por idade
 dp_v_idade <- ggplot(df_q3, aes(x = as.factor(Idades), y = Mediadp, fill = as.factor(Idades))) +
+>>>>>>> c15b6202ac39eaa5f1468ebe4f6c3016f3729e27
   stat_summary(fun = mean, geom = "bar") +  # Criar as barras com a média
-  stat_summary(fun = mean, geom = "text", aes(label = round(..y.., 2)), 
+  stat_summary(fun = mean, geom = "text", aes(label = round(after_stat(y), 2)), 
                vjust = -0.5, size = 5, color = "black") +  # Adicionar valores acima das barras
   labs(title = "Relação entre Idade e Depressão",
        x = "Idade",
        y = "Média de Níveis de Depressão") +
-  scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1),  
-                     labels = c("Menos sintomas\nde depressão", "", "", "", "Mais sintomas\nde depressão")) +  
+  scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1, 1.2),  
+                     labels = c("Menos sintomas\nde depressão", "", "", "", "", "Mais sintomas\nde depressão")) +  
+  expand_limits(y=1.2) +
   theme_minimal() +
   theme(legend.position = "none")  # Remove a legenda
 
+<<<<<<< HEAD
+Barplot_IdadeDep
+
+#######################
+
+# Questão 5
+
+#######################
+
+=======
 dp_v_idade
 
 #########################################
@@ -351,6 +386,7 @@ dp_v_idade
 # Questão 5
 
 #########################################
+>>>>>>> c15b6202ac39eaa5f1468ebe4f6c3016f3729e27
 # Scatter plot com v76 e a depressão
 
 v76_dep <- ggplot(na.omit(df_q3), aes(x=v76,y=Mediadp)) +
