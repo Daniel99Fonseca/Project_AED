@@ -1,6 +1,12 @@
 ---
 title: "Relatório Caso Prático 23"
-author: "Grupo 23"
+author:  
+- Grupo 23
+- Daniel Alexandre da Silva Fonseca | N° 125158 
+- Guilherme Gonçalves Pires | N° 131658  
+- João Afonso Carreira Filipe | N° 130665  
+- Nuno Costa | N° 130661  
+- Ricardo Ferreira | N° 125123
 date: "`r Sys.Date()`"
 output:
   html_document:
@@ -30,9 +36,9 @@ O presente relatório é baseado numa análise exploratória de dados, tendo com
 Para que tal seja possível, de forma grupal, decidimos focar em alguns tópicos, em forma de questões à base de dados, de forma a analisar possíveis correlações, nomeadamente: 
 
   **1.** Primeiramente, de forma a entender e conhecer a nossa amostra, pretendemos analisar a distribuição das horas de sono da nossa amostra.  
-  **2.**O género influencia as respostas relacionadas com a saúde psicológica e bem-estar? Existem diferenças significativas nos sintomas de depressão entre rapazes e raparigas?  
-  **3.** Existe uma correlação entre as horas de sono dos alunos e os sintomas de depressão?  
-  **4.** Há alguma faixa etária com sintomas depressivos mais predominante?  
+  **2.** O género influencia as respostas relacionadas com a saúde psicológica e bem-estar? Existem diferenças significativas nos sintomas de depressão entre rapazes e raparigas?
+  **3.** Existe uma correlação entre as horas de sono dos alunos e os sintomas de depressão?
+  **4.** Há alguma faixa etária com sintomas depressivos mais predominante?
   **5.** Por fim, é possível observar uma relação entre uma das questões propostas "Eu preocupo-me com muitas coisas" e sintomas depressivos?
 
 # A amostra
@@ -77,3 +83,4 @@ O presente gráfico apresenta uma distribuição normal, envieseada à esquerda.
 Desta forma, podemos inferir que, em média, os alunos tendem a dormir o número de horas recomendadas (**8**) dado que este é o número de horas dormidas com maior frequência entre os alunos.   
 Por conseguinte, também devido à hipótese apresentada anteriormente de os alunos, devido à pandemia estarem mais confinados em casa, podemos inferir que dormem bastante horas, sendo que a esmagadora maioria dorme acima de **7** horas por noite.  
 
+# 2. 
