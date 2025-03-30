@@ -34,13 +34,7 @@ O presente relatório é baseado numa análise exploratória de dados, tendo com
 
 Para que tal seja possível, de forma grupal, decidimos segmentar o relatório em diversas pontos-chave, de forma a encontrar possíveis correlações, nomeadamente: 
 
-<<<<<<< HEAD
 
-  **1.** Primeiramente, de forma a entender e conhecer a nossa amostra, pretendemos analisar a distribuição das horas de sono da nossa amostra.  
-  **2.** O género influencia as respostas relacionadas com a saúde psicológica e bem-estar? Existem diferenças significativas nos sintomas de depressão entre rapazes e raparigas?  
-  **3.** Existe uma correlação entre as horas de sono dos alunos e os sintomas de depressão?  
-  **4.** Há alguma faixa etária com sintomas depressivos mais predominante?  
-=======
   **1.** Distribuição das horas de sono dos alunos, como forma de entender os hábitos de descanso e possíveis correlações com os sintomas depressivos.
   **2.** Influência do género nas respostas relacionadas com a saúde psicológica e bem-estar, com foco nas diferenças nos sintomas de depressão entre rapazes e raparigas. 
   **3.** Relação entre as horas de sono e os sintomas de depressão, de forma a investigar se existe uma correlação entre o descanso e o estado emocional.  
@@ -49,7 +43,6 @@ Para que tal seja possível, de forma grupal, decidimos segmentar o relatório e
 
 
 # A amostra
-=======
   **1.** **Distribuição das horas de sono** dos alunos, para entender os hábitos de descanso dos alunos e possíveis correlações com sintomas depressivos.
   **2.** **Influência do género** nas respostas relacionadas com a saúde psicológica e bem-estar, com foco nas diferenças nos sintomas de depressão entre rapazes e raparigas. 
   **3.** **Correlação entre as horas de sono e os sintomas de depressão**, de forma a investigar se existe uma correlação entre o descanso e os sintomas depressivos, dado que uma boa qualidade de sono é muitas vezes equiparada a uma melhor saúde mental.
@@ -57,7 +50,6 @@ Para que tal seja possível, de forma grupal, decidimos segmentar o relatório e
   **5.** Por fim, será que é possível observar uma relação entre a preocupação excessiva ("Eu preocupo-me com muitas coisas") e sintomas depressivos?  
 
 # O inquérito e a amostra
->>>>>>> 3ca8e51138e407fc15a6138fee9eb618b456e1d3
 
 A estrutura do inquérito incluía uma série de questões relacionadas com sintomas depressivos: 
 
