@@ -44,7 +44,7 @@ Para que tal seja possível, de forma grupal, decidimos segmentar o relatório e
 
 A estrutura do inquérito incluía uma série de questões relacionadas com sintomas depressivos: 
 
-**1.** Não consegui sentir nenhum sentimento positivo.
+**1.** Não consegui sentir nenhum sentimento positivo.  
 **2.** Tive muita dificuldade em ter iniciativa para fazer coisas.  
 **3.** Senti que não tinha nada a esperar do futuro.   
 **4.** Senti-me triste e deprimido.  
