@@ -34,11 +34,11 @@ O presente relatório é baseado numa análise exploratória de dados, tendo com
 
 Para que tal seja possível, de forma grupal, decidimos segmentar o relatório em diversas pontos-chave, de forma a encontrar possíveis correlações, nomeadamente: 
 
-  **1.** **Distribuição das horas de sono** dos alunos, para entender os hábitos de descanso dos alunos e possíveis correlações com sintomas depressivos.  
-  **2.** **Influência do género** nas respostas relacionadas com a saúde psicológica e bem-estar, com foco nas diferenças nos sintomas de depressão entre rapazes e raparigas.  
-  **3.** **Correlação entre as horas de sono e os sintomas de depressão**, de forma a investigar se existe uma correlação entre o descanso e os sintomas depressivos, dado que uma boa qualidade de sono é muitas vezes equiparada a uma melhor saúde mental.  
-  **4.** **Faixa etária e sintomas depressivos**, com o intuito de identificar se existem grupos etários mais vulneráveis aos sintomas depressivos após a pandemia.  
-  **5.** Por fim, será que é possível observar uma relação entre a preocupação excessiva ("Eu preocupo-me com muitas coisas") e sintomas depressivos?    
+  **1.** **Distribuição das horas de sono** dos alunos, para entender os hábitos de descanso dos alunos e possíveis correlações com sintomas depressivos.
+  **2.** **Influência do género** nas respostas relacionadas com a saúde psicológica e bem-estar, com foco nas diferenças nos sintomas de depressão entre rapazes e raparigas. 
+  **3.** **Correlação entre as horas de sono e os sintomas de depressão**, de forma a investigar se existe uma correlação entre o descanso e os sintomas depressivos, dado que uma boa qualidade de sono é muitas vezes equiparada a uma melhor saúde mental.
+  **4.** **Faixa etária e sintomas depressivos**, com o intuito de identificar se existem grupos etários mais vulneráveis aos sintomas depressivos após a pandemia.
+  **5.** Por fim, será que é possível observar uma relação entre a preocupação excessiva ("Eu preocupo-me com muitas coisas") e sintomas depressivos?  
 
 # O inquérito e a amostra
 
@@ -95,7 +95,6 @@ Apesar de não ser um valor elevado em termos absolutos, a diferença relativa s
 
 No entanto, essa diferença pode refletir um maior impacto psicológico das condições de confinamento e da pandemia sobre as raparigas, possivelmente devido a fatores socioculturais que envolvem maiores expectativas emocionais sobre as mulheres, bem como a maior vulnerabilidade social e emocional observada neste grupo.
 
-
 # Horas de sono e depressão
 
 Para analisar a relação entre as horas de sono e os sintomas de depressão, foi utilizado um gráfico de dispersão. 
@@ -105,7 +104,6 @@ Uma das hipóteses iniciais fundava-se na ideia de que a quantidade de horas dor
 Desta forma, podemos então concluir que por um aluno dormir mais (ou menos) não necessariamente implica que este vá desenvolver sintomas depressivos nem um aluno que tem sintomas depressivos dorme mais (ou menos) horas.
 
 # Será que existe alguma faixa etária com maiores níveis de depressão?  
-
  
 A partir de uma certa faixa etária, aliado à puberdade vivenciada por todos os adolescentes, com níveis acrescidos de responsabilidades, assim como possível pressão em entrar no mundo universitário e terminar um ciclo escolar, seria expetável que inquiridos mais velhos apresentassem maiores níveis de depressão. 
   O gráfico seguinte ilustra a média dos níveis de depressão por faixa etária.
@@ -117,6 +115,13 @@ dp_v_idade
 **Figura 4:** Relação entre idades e depressão
 
 Desta forma podemos observar que, pós pandemia, como esperado, os inquiridos mais velhos possuem maiores níveis de depressão, apesar da faixa etária de 17 anos apresentou resultados fora do que seria esperado, mostrando menores níveis de depressão.
+
+# Relação entre a a preocupação excessiva e sintomas depressivos
+Foi analisada a relação entre a questão "Eu preocupo-me com muitas coisas" e os sintomas depressivos, recorrendo a um gráfico de dispersão. No entanto, não foi possível identificar uma correlação clara entre as respostas à questão e os sintomas de depressão.
+
+Esse resultado sugere que a preocupação excessiva pode não estar diretamente relacionada à depressão, mas sim a outros quadros emocionais, como a ansiedade. Enquanto a depressão se caracteriza por sintomas como tristeza profunda, apatia e perda de interesse, a ansiedade envolve frequentemente um estado de alerta constante e preocupações excessivas sobre múltiplos aspetos da vida.
+
+Além disso, é possível que a preocupação excessiva esteja mais ligada ao stresse crónico ou a padrões individuais de personalidade do que à depressão propriamente dita. Embora ambas as condições possam coexistir em alguns casos, a preocupação com muitas coisas não parece ser um indicador fiável de sintomas depressivos.
 
 # Conclusão
 
