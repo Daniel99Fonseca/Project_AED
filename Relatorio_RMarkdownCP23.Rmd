@@ -34,15 +34,15 @@ Para que tal seja possível, de forma grupal, decidimos focar em alguns tópicos
 
 # A amostra
 
-A amostra de dados é constituída por `r nrow(df)` alunos, da região **Norte** do país. Apresenta uma distribuição de género bastante proporcional, sendo `r masc_p`% masculino e `r fem_p`% feminino. O remanescente identifica-se como outro (`r outro_p`%) e `r nao_resp_p`% não responderam.
+A amostra de dados é constituída por **`r nrow(df)`** alunos, da região **Norte** do país. Apresenta uma distribuição de género bastante proporcional, sendo **`r masc_p`%** masculino e **`r fem_p`%** feminino. O remanescente identifica-se como outro (**`r outro_p`%**) e **`r nao_resp_p`%** não responderam.
 
 ```{r echo=FALSE, fig.cap="Distribuição dos géneros entre os alunos questionados."}
 ftable_gen
 ```
-**Figura 1:** Distribuição dos géneros entre os alunos questionados.
 
+   **Figura 1:** Distribuição dos géneros entre os alunos questionados.   
 
-Os alunos questionados encontram-se no 3º e 4º ciclo, com idades entre os `r min_age` e `r  max_age`. Em média, o aluno questionado tem `r media_idade` anos.
+Os alunos questionados encontram-se no 3º e 4º ciclo, com idades entre os **`r min_age`** e **`r  max_age`**. Em média, o aluno questionado tem **`r media_idade`** anos.
 
 O inquérito aos alunos era constituído pelas seguintes perguntas:    
   **1.** Não consegui sentir nenhum sentimento positivo.  
@@ -63,5 +63,8 @@ O inquérito aos alunos era constituído pelas seguintes perguntas:
 Histogram_H_Sono
 
 ```
-**Figura 2:** Distribuição horas de sono dos alunos
+   
+   **Figura 2:** Distribuição horas de sono dos alunos   
+   
 O presente gráfico apresenta uma distribuição normal, envieseada à esquerda.
+
