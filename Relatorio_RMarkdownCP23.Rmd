@@ -87,7 +87,7 @@ Por conseguinte, também devido à hipótese apresentada anteriormente de os alu
 <<<<<<< HEAD
 # 4. Será que existe alguma faixa etária com maiores níveis de depressão?
 
- Com o objetivo de analisar se os sintomas depressivos estão relacionados com a idade, pós pandemia, seria esperado que inquiridos mais velhos apresentassem maiores níveis de depressão.
+ Com o objetivo de analisar se os sintomas depressivos estão relacionados com a idade, pós pandemia, seria esperado que inquiridos mais velhos apresentassem maiores níveis de depressão, uma vez que falamos de crianças de 11 anos até à maioridade, como estão a crescer, começam a lidar com responsabilidade e vivenciar situações mais stressantes.
  Após cruzar as variáveis, Idades e Média de Níveis de Depressão, obtemos o seguinte gráfico:
  
 ```{r echo=FALSE}
